@@ -13,7 +13,7 @@ Pour créer une nouvelle branche il faut aller sur la branche main en faisant `g
 Une fois que vous avez apporté des changements à des fichiers sur votre branche, vous pouvez utiliser `git status` pour voir les changements en cours, `git add` pour ajouter les fichiers que vous voulez commit, `git commit` pour créer votre commit puis `git push` pour push tout vos commit sur la branche courante. (Voir les commandes en bas pour une explication plus détaillés des commandes).
 
 - **Remettre à jour sa branche avec main, si main change:**
-Premièrement faire `git status` pour vérifier que vous n'avez **aucun** changements en cours. Une fois fait, faites `git rebase main` pour tirer les derniers changements de la branche main sur votre branche courante puis faire `git push --force` pour écraser votre branche avec cette nouvelle suite de commit.
+Premièrement faire `git status` pour vérifier que vous n'avez **aucun** changements en cours. Une fois fait faites `git checkout main` puis `git pull` pour mettre à jour votre `main` local et revenez sur votre branche avec `git checkout {votre branche}` et ensuite faites `git rebase main` pour tirer les derniers changements de la branche main sur votre branche courante puis faire `git push --force` pour écraser votre branche avec cette nouvelle suite de commit.
 
 # Commandes Git utiles:
 - `git branch` indique sur quelle branche vous êtes.
