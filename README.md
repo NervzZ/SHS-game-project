@@ -9,6 +9,9 @@ Faire un `git pull` régulièrement pour mettre à jour sa branche locale avec l
 - **Créer une nouvelle branche:**
 Pour créer une nouvelle branche il faut aller sur la branche main en faisant `git checkout main` puis `git checkout -b {nom de la branche}` pour créer cette nouvelle branche à partir de `main`.
 
+- **Faire des changements et les push sur sa branche:**
+Une fois que vous avez apporté des changements à des fichiers sur votre branche, vous pouvez utiliser `git status` pour voir les changements en cours, `git add` pour ajouter les fichiers que vous voulez commit, `git commit` pour créer votre commit puis `git push` pour push tout vos commit sur la branche courante. (Voir les commandes en bas pour une explication plus détaillés des commandes).
+
 # Commandes Git utiles:
 - `git branch` indique sur quelle branche vous êtes.
 - `git status` indique quels fichiers ont été modifiés en local par rapport aux fichiers du repo dans la branche courante.
