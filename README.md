@@ -15,6 +15,11 @@ Une fois que vous avez apporté des changements à des fichiers sur votre branch
 - **Remettre à jour sa branche avec main, si main change:**
 Premièrement faire `git status` pour vérifier que vous n'avez **aucun** changements en cours. Une fois fait faites `git checkout main` puis `git pull` pour mettre à jour votre `main` local et revenez sur votre branche avec `git checkout {votre branche}` et ensuite faites `git rebase main` pour tirer les derniers changements de la branche main sur votre branche courante puis faire `git push --force` pour écraser votre branche avec cette nouvelle suite de commit.
 
+# Godot et git
+- **Popup Godot pour rafraîchir un fichier après une commande git:** Après un pull ou un changement de branche, Godot vous fait peut - être un pop-up pour vous demander ce que vous voulez faire de certains fichiers que vous aviez déjà d'ouvert. Appuyez **TOUJOURS** sur "reload" et ensuite vous devez simplement fermer ce fichier et le ré-ouvrir et vous verrez la version à jour. Il est possible de devoir attendre un court instant avant de pouvoir ouvrir le fichier et de voir les changements.
+
+- **Feature Git dans Godot:** Godot supporte apparemment des intégrations Git qui peuvent nous faciliter la tâche. Je n'ai pas encore eu le temps de me pencher la dessus mais à l'avenir si cela devait se faire je vais update ce README avec les éventuelles nouvelles features / outils qu'on peut utiliser pour nous faciliter la tâche.
+
 # Commandes Git utiles:
 - `git branch` indique sur quelle branche vous êtes.
 - `git status` indique quels fichiers ont été modifiés en local par rapport aux fichiers du repo dans la branche courante.
