@@ -1,6 +1,8 @@
 # SHS-game-project
 Prototype de jeu cours HUM-380
 
+La branche `main` est la branche principale du projet, elle est protégée et personne ne peut travailler directement dessus.
+
 # Travailler avec Git:
 - **Commencer notre session de travail:**
 Toujours faire un `git fetch` pour mettre à jour les références si des nouvelles branches ont été créees depuis votre dernière session de travail.
