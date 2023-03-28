@@ -2,11 +2,11 @@
 Prototype de jeu cours HUM-380
 
 # Travailler avec Git:
-- Commencer notre session de travail:
+- **Commencer notre session de travail:**
 Toujours faire un `git fetch` pour mettre à jour les références si des nouvelles branches ont été créees depuis votre dernière session de travail.
 Faire un `git pull` régulièrement pour mettre à jour sa branche locale avec les fichiers à jour du repo.
 
-- Créer une nouvelle branche
+- **Créer une nouvelle branche:**
 Pour créer une nouvelle branche il faut aller sur la branche main en faisant `git checkout main` puis `git checkout -b {nom de la branche}` pour créer cette nouvelle branche à partir de `main`.
 
 # Commandes Git utiles:
