@@ -15,7 +15,7 @@ Une fois que vous avez apporté des changements à des fichiers sur votre branch
 # Commandes Git utiles:
 - `git branch` indique sur quelle branche vous êtes.
 - `git status` indique quels fichiers ont été modifiés en local par rapport aux fichiers du repo dans la branche courante.
-- `git checkout {nom de la branche}` permet de changer de branche
+- `git checkout {nom de la branche}` permet de changer de branche.
 - `git pull` met à jour votre branche locale avec les fichiers du repo de la même branche courante.
 - `git fetch` met à jour les références de votre repo local avec celles du repo remote (utile pour détecter des nouvelles branches crées par exemple).
 - `git status` affiche les changements locaux qui diffèrent du repo remote de la branche courante. (toujours faire ça avant de add et commit des changements).
