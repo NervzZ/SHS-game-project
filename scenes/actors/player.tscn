@@ -1,11 +1,83 @@
-[gd_scene load_steps=3 format=3 uid="uid://cof0qvrvourhn"]
+[gd_scene load_steps=12 format=3 uid="uid://cof0qvrvourhn"]
 
-[ext_resource type="Texture2D" uid="uid://bd5hq20f0p2yg" path="res://svg/placeholder/arrow.svg" id="1_o1d5p"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_33vis"]
+[ext_resource type="Texture2D" uid="uid://8yhcxh7fam0a" path="res://scenes/actors/Bob/Bob.png" id="1_vqvij"]
+[ext_resource type="Texture2D" uid="uid://dg56t31fqeqq5" path="res://scenes/actors/Bob/BobInterDroite.png" id="2_yynct"]
+[ext_resource type="Texture2D" uid="uid://vi707bpmvnsk" path="res://scenes/actors/Bob/BobDroite.png" id="3_ptq4w"]
+[ext_resource type="Texture2D" uid="uid://c5gr45fdpfyhv" path="res://scenes/actors/Bob/BonGauche.png" id="4_a3hd1"]
+[ext_resource type="Texture2D" uid="uid://dvmxw5spxbpf" path="res://scenes/actors/Bob/BonInterGauche.png" id="5_186x1"]
+[ext_resource type="Texture2D" uid="uid://bfyakontn4qjs" path="res://scenes/actors/NPC/NPC.png" id="6_u6vt5"]
+[ext_resource type="Texture2D" uid="uid://b0dhyldu8lbms" path="res://scenes/actors/NPC/NPCInterDroite.png" id="7_r41yi"]
+[ext_resource type="Texture2D" uid="uid://crm5pqqdwnlfe" path="res://scenes/actors/NPC/NPCDroite.png" id="8_g504n"]
+[ext_resource type="Texture2D" uid="uid://bslvkhg7j5pss" path="res://scenes/actors/NPC/NPCGauche.png" id="9_8awmx"]
+[ext_resource type="Texture2D" uid="uid://c0m573sftp5nc" path="res://scenes/actors/NPC/NPCInterGauche.png" id="10_naa42"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ibdiy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vqvij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yynct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ptq4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yynct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_vqvij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a3hd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_186x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_186x1")
+}],
+"loop": true,
+"name": &"Bob",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_u6vt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r41yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g504n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r41yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u6vt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8awmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_naa42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_naa42")
+}],
+"loop": true,
+"name": &"NPC",
+"speed": 5.0
+}]
 
 [node name="player" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(72, 75)
-texture = ExtResource("1_o1d5p")
-script = ExtResource("2_33vis")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2066, 1003)
+sprite_frames = SubResource("SpriteFrames_ibdiy")
+animation = &"NPC"
+frame = 7
+frame_progress = 0.71737
+speed_scale = 2.0

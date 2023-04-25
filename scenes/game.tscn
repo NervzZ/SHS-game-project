@@ -1,8 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://codh71mq4ingm"]
+[gd_scene load_steps=8 format=3 uid="uid://codh71mq4ingm"]
 
 [ext_resource type="PackedScene" uid="uid://cof0qvrvourhn" path="res://scenes/actors/player.tscn" id="1_6gg3y"]
+[ext_resource type="Texture2D" uid="uid://8yhcxh7fam0a" path="res://scenes/actors/Bob/Bob.png" id="2_sujav"]
+[ext_resource type="Texture2D" uid="uid://dg56t31fqeqq5" path="res://scenes/actors/Bob/BobInterDroite.png" id="3_n3rc4"]
+[ext_resource type="Texture2D" uid="uid://vi707bpmvnsk" path="res://scenes/actors/Bob/BobDroite.png" id="4_n2mxo"]
+[ext_resource type="Texture2D" uid="uid://dvmxw5spxbpf" path="res://scenes/actors/Bob/BonInterGauche.png" id="5_73n4b"]
+[ext_resource type="Texture2D" uid="uid://c5gr45fdpfyhv" path="res://scenes/actors/Bob/BonGauche.png" id="6_rl0lv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7scc7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sujav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n3rc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n2mxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n3rc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sujav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_73n4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rl0lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_73n4b")
+}],
+"loop": true,
+"name": &"Bob_Animation",
+"speed": 5.0
+}]
 
 [node name="GameRoot" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_6gg3y")]
 position = Vector2(25, 21)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7scc7")
+animation = &"Bob_Animation"
