@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 var lookTarget = Vector2(0., 0.)
 var movements = Vector2(0., 0.)
