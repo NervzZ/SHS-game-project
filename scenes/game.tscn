@@ -1,8 +1,250 @@
-[gd_scene load_steps=2 format=3 uid="uid://codh71mq4ingm"]
+[gd_scene load_steps=11 format=3 uid="uid://codh71mq4ingm"]
 
-[ext_resource type="PackedScene" uid="uid://cof0qvrvourhn" path="res://scenes/actors/player.tscn" id="1_6gg3y"]
+[ext_resource type="Texture2D" uid="uid://befai3dxu4jv4" path="res://svg/Interior Design/Floor_HDF.png" id="1_ido0e"]
+[ext_resource type="PackedScene" uid="uid://cc8nsh5eskh67" path="res://scenes/Walls/BrickWall.tscn" id="1_wo4cv"]
+[ext_resource type="PackedScene" uid="uid://d28ja2gdvgs03" path="res://scenes/actors/main_character.tscn" id="2_5t6ty"]
+[ext_resource type="PackedScene" uid="uid://ce0cu3bewodyu" path="res://scenes/Walls/White_walls.tscn" id="3_e1y6a"]
+[ext_resource type="Texture2D" uid="uid://ic0ow1ybmkxg" path="res://svg/Interior Design/Reception.png" id="4_wwh0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcil7"]
+size = Vector2(578.406, 283.511)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i33fs"]
+size = Vector2(182.357, 180.939)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8c17"]
+size = Vector2(424.534, 199.445)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1j7fh"]
+size = Vector2(222.24, 135.338)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yicpe"]
+size = Vector2(96.1752, 89.7504)
 
 [node name="GameRoot" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_6gg3y")]
-position = Vector2(25, 21)
+[node name="Inside" type="Node2D" parent="."]
+
+[node name="Design" type="Node2D" parent="Inside"]
+
+[node name="Floor" type="Node2D" parent="Inside/Design"]
+
+[node name="Floor" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(1254.21, 140.776)
+scale = Vector2(3.26586, 1.80773)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor2" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(1256.21, 851.776)
+scale = Vector2(3.26586, 1.80773)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor3" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(1257.21, 1579.78)
+scale = Vector2(3.26586, 1.80773)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor4" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(1256.71, 2312)
+scale = Vector2(3.26746, 1.77941)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor5" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(3295.21, 137.776)
+scale = Vector2(3.26586, 1.80773)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor6" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(3297.21, 848.776)
+scale = Vector2(3.26586, 1.80773)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor7" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(3297.21, 1576.78)
+scale = Vector2(3.26586, 1.80773)
+texture = ExtResource("1_ido0e")
+
+[node name="Floor8" type="Sprite2D" parent="Inside/Design/Floor"]
+position = Vector2(3297.71, 2309)
+scale = Vector2(3.26746, 1.77941)
+texture = ExtResource("1_ido0e")
+
+[node name="Reception" type="Sprite2D" parent="Inside/Design"]
+position = Vector2(1841, 456)
+rotation = 0.958186
+scale = Vector2(0.701946, 0.701946)
+texture = ExtResource("4_wwh0b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Inside/Design/Reception"]
+
+[node name="Desk" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(18.5132, -248.601)
+shape = SubResource("RectangleShape2D_kcil7")
+
+[node name="Chair" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(-314.839, 86.9012)
+shape = SubResource("RectangleShape2D_i33fs")
+
+[node name="Chair2" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(377.522, 84.052)
+shape = SubResource("RectangleShape2D_i33fs")
+
+[node name="Sofa" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(24.2185, 296.319)
+shape = SubResource("RectangleShape2D_g8c17")
+
+[node name="Table" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(28.4924, 83.3397)
+shape = SubResource("RectangleShape2D_1j7fh")
+
+[node name="Plant" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(-323.735, -194.459)
+shape = SubResource("RectangleShape2D_yicpe")
+
+[node name="Plant2" type="CollisionShape2D" parent="Inside/Design/Reception/StaticBody2D"]
+position = Vector2(380.371, -190.898)
+shape = SubResource("RectangleShape2D_yicpe")
+
+[node name="Interior Walls" type="Node2D" parent="."]
+
+[node name="White_wall" parent="Interior Walls" instance=ExtResource("3_e1y6a")]
+position = Vector2(462.25, 344)
+scale = Vector2(0.434524, 0.855263)
+
+[node name="White_wall2" parent="Interior Walls" instance=ExtResource("3_e1y6a")]
+position = Vector2(2275, 1596.17)
+rotation = 1.5708
+scale = Vector2(2.26976, 1.05439)
+
+[node name="White_wall3" parent="Interior Walls" instance=ExtResource("3_e1y6a")]
+position = Vector2(2086.81, 278.564)
+rotation = 0.973894
+scale = Vector2(0.735998, 1.08737)
+
+[node name="SurrBrickWall" type="Node2D" parent="."]
+
+[node name="Brick_Wall" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(197, -105)
+
+[node name="Brick_Wall2" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(594, -104)
+
+[node name="Brick_Wall3" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(993, -104)
+
+[node name="Brick_Wall4" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(1393, -105)
+
+[node name="Brick_Wall5" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(1792, -104)
+
+[node name="Brick_Wall6" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2190, -103)
+
+[node name="Brick_Wall7" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2588, -104)
+
+[node name="Brick_Wall8" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2987, -106)
+
+[node name="Brick_Wall9" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(3386, -106)
+
+[node name="Brick_Wall10" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(3786, -107)
+
+[node name="Brick_Wall17" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4185, -106)
+
+[node name="Brick_Wall19" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4583, -109)
+
+[node name="Brick_Wall11" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(197, 2547)
+
+[node name="Brick_Wall12" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(594, 2548)
+
+[node name="Brick_Wall13" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(993, 2548)
+
+[node name="Brick_Wall14" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(1393, 2547)
+
+[node name="Brick_Wall21" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(1792, 2548)
+
+[node name="Brick_Wall24" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2190, 2545)
+
+[node name="Brick_Wall25" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2590, 2545)
+
+[node name="Brick_Wall26" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2987, 2546)
+
+[node name="Brick_Wall27" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(3386, 2546)
+
+[node name="Brick_Wall28" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(3786, 2545)
+
+[node name="Brick_Wall29" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4185, 2546)
+
+[node name="Brick_Wall30" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4583, 2543)
+
+[node name="Brick_Wall15" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4653, 1815)
+rotation = 1.5708
+
+[node name="Brick_Wall16" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4652, 1417)
+rotation = 1.5708
+
+[node name="Brick_Wall18" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4654, 2214)
+rotation = 1.5708
+
+[node name="Brick_Wall20" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4653, 618)
+rotation = 1.5708
+
+[node name="Brick_Wall22" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4651, 220)
+rotation = 1.5708
+
+[node name="Brick_Wall23" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(4653, 1018)
+rotation = 1.5708
+
+[node name="Brick_Wall31" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(134, 1818)
+rotation = 1.5708
+
+[node name="Brick_Wall32" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(133.001, 1420)
+rotation = 1.5708
+
+[node name="Brick_Wall33" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(135, 2217)
+rotation = 1.5708
+
+[node name="Brick_Wall34" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(134, 621)
+rotation = 1.5708
+
+[node name="Brick_Wall35" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(132.001, 223)
+rotation = 1.5708
+
+[node name="Brick_Wall36" parent="SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(134, 1021)
+rotation = 1.5708
+
+[node name="Main Character" parent="." instance=ExtResource("2_5t6ty")]
+position = Vector2(374, 232)
+
+[node name="Camera2D" type="Camera2D" parent="Main Character"]
+position_smoothing_enabled = true

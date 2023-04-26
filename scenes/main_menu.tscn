@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccmcyrxyusckt"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_fcmft"]
+[ext_resource type="PackedScene" uid="uid://codh71mq4ingm" path="res://scenes/game.tscn" id="2_tjvtl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
+bg_color = Color(0.376471, 0.631373, 0.803922, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx7i6"]
+bg_color = Color(0.215686, 0.360784, 0.686275, 1)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_fcmft")
+mainGameScene = ExtResource("2_tjvtl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.282353, 0.603922, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1075.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 125
+text = "Cyber Shield"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 300
+
+[node name="StatGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Start Game
+"
+
+[node name="RightContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 300
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/RightContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Exit
+"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_button_button_up"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_up"]
