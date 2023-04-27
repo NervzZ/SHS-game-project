@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccmcyrxyusckt"]
+[gd_scene load_steps=4 format=3 uid="uid://djf146ud17gr4"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_fcmft"]
-[ext_resource type="PackedScene" uid="uid://codh71mq4ingm" path="res://scenes/game.tscn" id="2_tjvtl"]
+[ext_resource type="Script" path="res://scripts/menus/main_menu.gd" id="1_3n6lb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
 bg_color = Color(0.376471, 0.631373, 0.803922, 1)
@@ -14,8 +13,7 @@ corner_radius_bottom_left = 5
 bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 
 [node name="MainMenu" type="Node2D"]
-script = ExtResource("1_fcmft")
-mainGameScene = ExtResource("2_tjvtl")
+script = ExtResource("1_3n6lb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 size_flags_horizontal = 3
