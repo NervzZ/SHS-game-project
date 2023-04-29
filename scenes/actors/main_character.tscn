@@ -1,33 +1,46 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmwus7eoqsad2"]
+[gd_scene load_steps=9 format=3 uid="uid://csl8eburfsk8q"]
 
 [ext_resource type="Script" path="res://scripts/player/main_character.gd" id="1_xm6gw"]
-[ext_resource type="Texture2D" uid="uid://dd1pk61s5p652" path="res://svg/MainCharacter/MC_animation/1.png" id="3_tpsq3"]
-[ext_resource type="Texture2D" uid="uid://d2b3ie2pm1fse" path="res://svg/MainCharacter/MC_animation/2.png" id="4_m4kd8"]
-[ext_resource type="Texture2D" uid="uid://dne6nc25063ph" path="res://svg/MainCharacter/MC_animation/3.png" id="5_i1lkn"]
-[ext_resource type="Texture2D" uid="uid://dbgfynhkt5kry" path="res://svg/MainCharacter/MC_animation/4.png" id="6_gilmy"]
+[ext_resource type="Texture2D" uid="uid://8yhcxh7fam0a" path="res://graphics/Bob/Bob.png" id="2_plnue"]
+[ext_resource type="Texture2D" uid="uid://dg56t31fqeqq5" path="res://graphics/Bob/BobInterDroite.png" id="3_ihsiw"]
+[ext_resource type="Texture2D" uid="uid://vi707bpmvnsk" path="res://graphics/Bob/BobDroite.png" id="4_enjvp"]
+[ext_resource type="Texture2D" uid="uid://dvmxw5spxbpf" path="res://graphics/Bob/BonInterGauche.png" id="5_a3eur"]
+[ext_resource type="Texture2D" uid="uid://c5gr45fdpfyhv" path="res://graphics/Bob/BonGauche.png" id="6_5anbv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhor7"]
-radius = 46.0
+radius = 37.5
 height = 152.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hep56"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_tpsq3")
+"texture": ExtResource("2_plnue")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_m4kd8")
+"texture": ExtResource("3_ihsiw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_i1lkn")
+"texture": ExtResource("4_enjvp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_gilmy")
+"texture": ExtResource("3_ihsiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_plnue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a3eur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5anbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a3eur")
 }],
 "loop": true,
 "name": &"Walking",
-"speed": 10.0
+"speed": 13.0
 }]
 
 [node name="Main Character" type="CharacterBody2D"]
@@ -39,7 +52,7 @@ shape = SubResource("CapsuleShape2D_dhor7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = -1.5708
-scale = Vector2(0.459136, 0.459136)
+scale = Vector2(0.17, 0.17)
 sprite_frames = SubResource("SpriteFrames_hep56")
 animation = &"Walking"
-frame_progress = 0.806912
+offset = Vector2(0, 210)
