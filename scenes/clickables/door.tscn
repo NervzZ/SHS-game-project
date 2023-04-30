@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://be8g2soaxpir0"]
+
+[ext_resource type="Texture2D" uid="uid://ejunwpi627jw" path="res://graphics/Walls_svg/White_wall.png" id="1_1n7qc"]
+[ext_resource type="Script" path="res://scripts/clickables/Door.gd" id="1_2nb0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
+size = Vector2(307, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nus4t"]
+size = Vector2(307, 25.5)
+
+[node name="Door" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea")]
+script = ExtResource("1_2nb0a")
+clickableArea = NodePath("ClickArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(154, 5.96046e-08)
+scale = Vector2(0.332251, 0.657895)
+texture = ExtResource("1_1n7qc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(154.5, 0.5)
+shape = SubResource("RectangleShape2D_vcm44")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+visible = false
+position = Vector2(154, 0)
+shape = SubResource("RectangleShape2D_nus4t")
