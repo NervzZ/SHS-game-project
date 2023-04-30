@@ -86,6 +86,6 @@ text = "Quit
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_stat_game_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_stat_game_button_up"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_quit_button_down"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_quit_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_button_button_up"]

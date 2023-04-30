@@ -83,6 +83,6 @@ text = "Exit
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_stat_game_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_stat_game_button_up"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_up"]
