@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://crbygnkslpwet"]
+[gd_scene load_steps=14 format=3 uid="uid://crbygnkslpwet"]
 
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_bgpbw"]
 [ext_resource type="Texture2D" uid="uid://befai3dxu4jv4" path="res://svg/Interior Design/Floor_HDF.png" id="1_ido0e"]
 [ext_resource type="PackedScene" uid="uid://cc8nsh5eskh67" path="res://scenes/decor/Walls/BrickWall.tscn" id="1_wo4cv"]
 [ext_resource type="PackedScene" uid="uid://bmwus7eoqsad2" path="res://scenes/actors/main_character.tscn" id="2_5t6ty"]
+[ext_resource type="PackedScene" uid="uid://djf146ud17gr4" path="res://scenes/menus/main_menu.tscn" id="2_hj6g3"]
 [ext_resource type="PackedScene" uid="uid://ce0cu3bewodyu" path="res://scenes/decor/Walls/White_walls.tscn" id="3_e1y6a"]
 [ext_resource type="Texture2D" uid="uid://ic0ow1ybmkxg" path="res://svg/Interior Design/Reception.png" id="4_wwh0b"]
+[ext_resource type="PackedScene" uid="uid://cb0cgxc0dh8k0" path="res://scenes/menus/Pause_menu.tscn" id="8_f3syx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcil7"]
 size = Vector2(578.406, 283.511)
@@ -22,6 +25,9 @@ size = Vector2(222.24, 135.338)
 size = Vector2(96.1752, 89.7504)
 
 [node name="GameRoot" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_bgpbw")
+mainMenuScene = ExtResource("2_hj6g3")
 
 [node name="Inside" type="Node2D" parent="."]
 
@@ -249,3 +255,8 @@ position = Vector2(374, 232)
 [node name="Camera2D" type="Camera2D" parent="Main Character"]
 position = Vector2(1, 0)
 position_smoothing_enabled = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_f3syx")]
+process_mode = 2
+visible = false
+position = Vector2(360, 246)
