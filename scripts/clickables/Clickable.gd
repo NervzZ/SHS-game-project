@@ -35,8 +35,13 @@ func _ready():
 #override this to have additional initialisation logic on _ready()
 func init():
 	pass
+
+#override this for additional process logic
+func process_logic(delta):
+	pass
 	
 func _process(delta):
+	process_logic(delta)
 	if mouseIsHovering and playerIsInRange:
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	else:
