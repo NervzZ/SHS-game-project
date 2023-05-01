@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://drixwb1ne70pn"]
+[gd_scene load_steps=26 format=3 uid="uid://drixwb1ne70pn"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -23,9 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://bm0771r85u6xv" path="res://scenes/decor/exterior/sitting_curve_out.tscn" id="22_imeep"]
 [ext_resource type="PackedScene" uid="uid://b5gqwnoteeild" path="res://scenes/decor/office/tennis_table.tscn" id="23_l1odi"]
 [ext_resource type="PackedScene" uid="uid://7s8qe67kcnip" path="res://scenes/decor/exterior/small_greenery.tscn" id="24_isf5y"]
+[ext_resource type="PackedScene" uid="uid://be8g2soaxpir0" path="res://scenes/clickables/door.tscn" id="25_gubgn"]
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player_spawn.tscn" id="25_lgtp3"]
 
-[node name="GameRoot" type="Node2D"]
+[node name="Office" type="Node2D"]
 position = Vector2(-10.6824, -0.763031)
 
 [node name="Outside Decore" type="Node2D" parent="."]
@@ -85,12 +86,18 @@ texture = ExtResource("2_ub2ev")
 flip_v = true
 
 [node name="Porcelaine" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-3143.89, 1356.8)
+position = Vector2(-1131.32, 1356.8)
+scale = Vector2(0.381, 1)
 texture = ExtResource("3_pj4ix")
 
 [node name="Black" type="Sprite2D" parent="Outside Decore/Outside Life"]
 position = Vector2(-2164.52, 3548.04)
 scale = Vector2(31.1461, 158.05)
+texture = ExtResource("4_7wn0e")
+
+[node name="Black5" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-3221.32, 1379.41)
+scale = Vector2(14.6308, 113.544)
 texture = ExtResource("4_7wn0e")
 
 [node name="Black3" type="Sprite2D" parent="Outside Decore/Outside Life"]
@@ -1192,6 +1199,16 @@ position = Vector2(8647.4, 4500.73)
 position = Vector2(479.51, 1060.45)
 scale = Vector2(1.34978, 1)
 
+[node name="Sprite2D41" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
+position = Vector2(206.682, 1122.76)
+rotation = 1.5708
+scale = Vector2(0.293433, 1)
+
+[node name="Sprite2D42" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
+position = Vector2(209.682, 1593.96)
+rotation = 1.5708
+scale = Vector2(0.285415, 1)
+
 [node name="Sprite2D32" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
 position = Vector2(-459.801, 822.038)
 scale = Vector2(1.34978, 1)
@@ -1559,4 +1576,8 @@ rotation = 3.14159
 texture = ExtResource("19_62glk")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("25_lgtp3")]
-position = Vector2(343.682, 1357.76)
+position = Vector2(-315.318, 1363.76)
+
+[node name="Door" parent="." instance=ExtResource("25_gubgn")]
+position = Vector2(179.682, 1225.76)
+rotation = 1.5708
