@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://erm1j76i31vm"
-path="res://.godot/imported/Cybershield Logo.png-8291617f9777940addce43ca27240827.ctex"
+path="res://.godot/imported/Cybershield Logo.png-b110b09b79524cbbac691e805ddfb308.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/decor/Cybershield Logo.png"
-dest_files=["res://.godot/imported/Cybershield Logo.png-8291617f9777940addce43ca27240827.ctex"]
+source_file="res://graphics/Logos/Cybershield Logo.png"
+dest_files=["res://.godot/imported/Cybershield Logo.png-b110b09b79524cbbac691e805ddfb308.ctex"]
 
 [params]
 

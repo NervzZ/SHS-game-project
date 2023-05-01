@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Shs-game-project"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://scenes/levels/office.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://graphics/placeholder/icon.svg"
 
 [autoload]
 
 SaveFile="*res://scripts/save_file.gd"
+GameManager="*res://scripts/Singletons/GameManager.gd"
+Levels="*res://scripts/Singletons/Levels.gd"
 
 [display]
 
