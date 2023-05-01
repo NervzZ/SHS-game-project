@@ -15,7 +15,6 @@ size = Vector2(299, 174)
 [node name="Door" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
 sync_to_physics = false
 script = ExtResource("1_2nb0a")
-isClosed = false
 clickableArea = NodePath("ClickArea")
 interactArea = NodePath("InteractArea")
 mainSprite = NodePath("Main Sprite")
