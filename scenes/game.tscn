@@ -38,48 +38,48 @@ mainMenuScene = ExtResource("2_hj6g3")
 [node name="Floor" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(1254.21, 140.776)
 scale = Vector2(3.26586, 1.80773)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor2" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(1256.21, 851.776)
 scale = Vector2(3.26586, 1.80773)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor3" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(1257.21, 1579.78)
 scale = Vector2(3.26586, 1.80773)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor4" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(1256.71, 2312)
 scale = Vector2(3.26746, 1.77941)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor5" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(3295.21, 137.776)
 scale = Vector2(3.26586, 1.80773)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor6" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(3297.21, 848.776)
 scale = Vector2(3.26586, 1.80773)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor7" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(3297.21, 1576.78)
 scale = Vector2(3.26586, 1.80773)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Floor8" type="Sprite2D" parent="Inside/Design/Floor"]
 position = Vector2(3297.71, 2309)
 scale = Vector2(3.26746, 1.77941)
-texture = ExtResource("1_ido0e")
+texture = ExtResource("1_mha7v")
 
 [node name="Reception" type="Sprite2D" parent="Inside/Design"]
 position = Vector2(1841, 456)
 rotation = 0.958186
 scale = Vector2(0.701946, 0.701946)
-texture = ExtResource("4_wwh0b")
+texture = ExtResource("2_jpt55")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Inside/Design/Reception"]
 

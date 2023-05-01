@@ -55,6 +55,7 @@ func _process(_delta):
 	
 	if velocity != Vector2.ZERO:
 		animatedSprite.play("Walking")
+		mouseTarget = get_global_mouse_position()
 		look_at(computeLookTarget())
 	else:
 		animatedSprite.stop()
