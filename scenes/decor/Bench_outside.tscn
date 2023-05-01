@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcn7huivsd0ul"]
+
+[ext_resource type="Texture2D" uid="uid://cald8pydbwj5l" path="res://graphics/Interior Design/Bench.png" id="1_pou4c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ao5t0"]
+size = Vector2(118.064, 370.078)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7pw5"]
+size = Vector2(250.296, 117.635)
+
+[node name="Bench2" type="Sprite2D"]
+position = Vector2(1845.92, -151.381)
+rotation = -1.5708
+scale = Vector2(0.724244, 0.724244)
+texture = ExtResource("1_pou4c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(125.282, 0.827148)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ao5t0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-58.8977, -125.394)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_f7pw5")

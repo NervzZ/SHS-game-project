@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://7s8qe67kcnip"]
+
+[ext_resource type="Texture2D" uid="uid://dfcev8lc4oiv1" path="res://graphics/Interior Design/Small Greenery.png" id="1_gtwkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngl48"]
+size = Vector2(281.758, 286.789)
+
+[node name="SmallGreenery" type="Sprite2D"]
+position = Vector2(4640.02, 7410.81)
+scale = Vector2(0.460355, 0.460355)
+texture = ExtResource("1_gtwkd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(13.6611, -6.12695)
+shape = SubResource("RectangleShape2D_ngl48")

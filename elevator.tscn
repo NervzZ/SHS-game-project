@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn5ffqkqyisxq"]
+
+[ext_resource type="Texture2D" uid="uid://cfjiqjfgu10iv" path="res://graphics/Outside world/Elevator.png" id="1_6agvg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlsdv"]
+size = Vector2(758.293, 64.4164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at0km"]
+size = Vector2(749.157, 100.117)
+
+[node name="Elevator" type="Sprite2D"]
+position = Vector2(-1513.61, 519.811)
+scale = Vector2(0.413699, 0.695708)
+texture = ExtResource("1_6agvg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(173.335, 63.2311)
+shape = SubResource("RectangleShape2D_nlsdv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-269.764, 81.8575)
+shape = SubResource("RectangleShape2D_at0km")
