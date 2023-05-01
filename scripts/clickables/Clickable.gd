@@ -35,6 +35,12 @@ func _ready():
 #override this to have additional initialisation logic on _ready()
 func init():
 	pass
+	
+func _process(delta):
+	if mouseIsHovering and playerIsInRange:
+		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	else:
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 #override this to define your behavior when the clickable is clicked
 func clickedEvent():
