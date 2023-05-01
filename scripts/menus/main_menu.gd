@@ -1,10 +1,8 @@
 extends Node2D
 
+@export var GameScene : PackedScene
 
-@export var mainGameScene : PackedScene
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
@@ -14,10 +12,11 @@ func _process(delta):
 	pass
 
 
-func _on_button_button_up():
-	get_tree().change_scene_to_packed(mainGameScene) 
 
 
+func _on_stat_game_button_down():
+	get_tree().change_scene_to_file("res://scenes/game.tscn") 
+	
 
-func _on_button_button_down():
-	get_tree().quit() # Replace with function body.
+func _on_exit_button_down():
+	get_tree().quit()

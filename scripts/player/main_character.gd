@@ -23,7 +23,9 @@ func _ready():
 	#camera_holder.position = position
 	pass
 	
-
+func _get_position():
+	return position
+	
 func _input(event):
 	if event is InputEventMouseMotion:
 		mouseTarget = get_global_mouse_position()
