@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5gqwnoteeild"]
+
+[ext_resource type="Texture2D" uid="uid://cr05ovitcxfh7" path="res://graphics/Interior Design/Tennis Table.png" id="1_fp7rr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85hiv"]
+size = Vector2(390.801, 180.367)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf3er"]
+size = Vector2(14.0857, 258.404)
+
+[node name="TennisTable" type="Sprite2D"]
+position = Vector2(8032.97, 2203.31)
+scale = Vector2(1.41149, 1.41149)
+texture = ExtResource("1_fp7rr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.754883, 0.505981)
+shape = SubResource("RectangleShape2D_85hiv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2.95752, 1.4071)
+shape = SubResource("RectangleShape2D_yf3er")

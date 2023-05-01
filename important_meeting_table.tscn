@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk880qt6gag74"]
+
+[ext_resource type="Texture2D" uid="uid://2617sdwqjx1n" path="res://graphics/Interior Design/Important meeting table.png" id="1_xhrmv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lcop5"]
+radius = 79.0807
+height = 499.377
+
+[node name="ImportantMeetingTable" type="Sprite2D"]
+position = Vector2(8102.37, 2914.91)
+scale = Vector2(2.6172, 2.6172)
+texture = ExtResource("1_xhrmv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8.01099, -3.33789)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lcop5")

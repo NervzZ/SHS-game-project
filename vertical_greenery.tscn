@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ticeiiy5hf44"]
+
+[ext_resource type="Texture2D" uid="uid://cwemovvj0jvgt" path="res://graphics/Interior Design/Vertical Greenery.png" id="1_1b0am"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0rpn"]
+size = Vector2(195.021, 400.978)
+
+[node name="VerticalGreenery" type="Sprite2D"]
+position = Vector2(8854.95, 1757.15)
+scale = Vector2(0.835531, 0.835531)
+texture = ExtResource("1_1b0am")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-5.28613, 5.46802)
+shape = SubResource("RectangleShape2D_x0rpn")
