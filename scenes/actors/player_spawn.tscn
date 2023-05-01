@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbwphc7ecxxvg"]
+
+[ext_resource type="Texture2D" uid="uid://8yhcxh7fam0a" path="res://graphics/Bob/Bob.png" id="1_hf1ac"]
+
+[node name="PlayerSpawn" type="Node2D"]
+rotation = -1.5708
+
+[node name="Helper Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.172049, 0.172049)
+texture = ExtResource("1_hf1ac")
+offset = Vector2(0, 210)

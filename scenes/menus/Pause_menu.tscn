@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb0cgxc0dh8k0"]
+[gd_scene load_steps=4 format=3 uid="uid://cb0cgxc0dh8k0"]
 
 [ext_resource type="Script" path="res://scripts/menus/Pause_menu.gd" id="1_ydcl2"]
-[ext_resource type="PackedScene" uid="uid://djf146ud17gr4" path="res://scenes/menus/main_menu.tscn" id="2_w1ejx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
 bg_color = Color(0.376471, 0.631373, 0.803922, 1)
@@ -16,7 +15,6 @@ bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 [node name="PauseMenu" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
 process_mode = 3
 script = ExtResource("1_ydcl2")
-MainMenu = ExtResource("2_w1ejx")
 resume = NodePath("MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue")
 quit = NodePath("MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit")
 metadata/_edit_group_ = true
