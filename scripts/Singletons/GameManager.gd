@@ -3,7 +3,7 @@ extends Node2D
 @onready var levels = get_node("/root/Levels")
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
 var playerSpawn : Node2D
-var player : CharacterBody2D = load("res://scenes/actors/main_character.tscn").instantiate()
+var player : CharacterBody2D = load("res://scenes/actors/player/main_character.tscn").instantiate()
 var UI : CanvasLayer = CanvasLayer.new()
 var current_scene = null
 

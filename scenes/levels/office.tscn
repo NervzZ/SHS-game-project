@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://drixwb1ne70pn"]
+[gd_scene load_steps=26 format=3 uid="uid://djg32yldgdypy"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -24,10 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://b5gqwnoteeild" path="res://scenes/decor/office/tennis_table.tscn" id="23_l1odi"]
 [ext_resource type="PackedScene" uid="uid://7s8qe67kcnip" path="res://scenes/decor/exterior/small_greenery.tscn" id="24_isf5y"]
 [ext_resource type="PackedScene" uid="uid://be8g2soaxpir0" path="res://scenes/clickables/door.tscn" id="25_gubgn"]
-[ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player_spawn.tscn" id="25_lgtp3"]
+[ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="25_lgtp3"]
 
 [node name="Office" type="Node2D"]
 position = Vector2(-10.6824, -0.763031)
+rotation = -1.5708
 
 [node name="Outside Decore" type="Node2D" parent="."]
 
@@ -1200,12 +1201,12 @@ position = Vector2(479.51, 1060.45)
 scale = Vector2(1.34978, 1)
 
 [node name="Sprite2D41" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
-position = Vector2(206.682, 1122.76)
+position = Vector2(46.1828, 1122.46)
 rotation = 1.5708
 scale = Vector2(0.293433, 1)
 
 [node name="Sprite2D42" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
-position = Vector2(209.682, 1593.96)
+position = Vector2(49.1828, 1593.66)
 rotation = 1.5708
 scale = Vector2(0.285415, 1)
 
@@ -1579,5 +1580,5 @@ texture = ExtResource("19_62glk")
 position = Vector2(-315.318, 1363.76)
 
 [node name="Door" parent="." instance=ExtResource("25_gubgn")]
-position = Vector2(179.682, 1225.76)
+position = Vector2(19.1828, 1225.46)
 rotation = 1.5708
