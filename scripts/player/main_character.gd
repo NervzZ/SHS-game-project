@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 
 var mouseTarget = Vector2.ZERO
-
+@onready var footsteps: AudioStreamPlayer2D = get_node("Footsteps")
 @onready var animatedSprite = get_node("AnimatedSprite2D")
 
 
@@ -45,8 +45,12 @@ func _process(_delta):
 		animatedSprite.play("Walking")
 		mouseTarget = get_global_mouse_position()
 		look_at(computeLookTarget())
+		
+		if !footsteps.playing:
+			footsteps.play()
 	else:
 		animatedSprite.stop()
+		footsteps.stop()
 	
 	#makes it smoother when being stopped by a collision to prevent the player model to go brrrrrr
 	if !Input.is_action_pressed("Move Right") and !Input.is_action_pressed("Move Left") and !Input.is_action_pressed("Move Up") and !Input.is_action_pressed("Move Down"):
