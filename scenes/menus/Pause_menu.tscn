@@ -13,9 +13,12 @@ corner_radius_bottom_left = 5
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx7i6"]
 bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 
-[node name="MainMenu" type="Node2D"]
+[node name="PauseMenu" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
+process_mode = 3
 script = ExtResource("1_ydcl2")
 MainMenu = ExtResource("2_w1ejx")
+resume = NodePath("MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue")
+quit = NodePath("MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit")
 metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -81,11 +84,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
 text = "Quit
 "
-
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_continue_button_down"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_stat_game_button_down"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue" to="." method="_on_stat_game_button_up"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_quit_button_down"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit" to="." method="_on_button_button_up"]
