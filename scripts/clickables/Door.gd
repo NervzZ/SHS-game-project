@@ -3,8 +3,8 @@ extends "res://scripts/clickables/Clickable.gd"
 @export var isClosed : bool = true
 @export var openDegrees : float = 115
 @export var openSpeed : float = 0.7
-var closedRotation = rotation
-var openRotation = closedRotation + deg_to_rad(openDegrees)
+@onready var closedRotation = rotation
+@onready var openRotation = closedRotation + deg_to_rad(openDegrees)
 var tween : Tween
 
 @onready var obstacle : CollisionShape2D = get_node("Obstacle")

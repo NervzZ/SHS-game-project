@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://1ag5dvu756sy" path="res://graphics/Interior Design/door.png" id="4_ott8w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
-size = Vector2(241, 18)
+size = Vector2(266, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nus4t"]
-size = Vector2(240.5, 35)
+size = Vector2(266.5, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opfti"]
-size = Vector2(299, 174)
+size = Vector2(362, 174)
 
 [node name="Door" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
 sync_to_physics = false
@@ -20,23 +20,23 @@ interactArea = NodePath("InteractArea")
 mainSprite = NodePath("Main Sprite")
 
 [node name="Main Sprite" type="Sprite2D" parent="."]
-position = Vector2(123, 3)
+position = Vector2(135, 2)
 rotation = -3.14159
 scale = Vector2(0.347077, 0.347077)
 texture = ExtResource("4_ott8w")
 
 [node name="Obstacle" type="CollisionShape2D" parent="."]
-position = Vector2(121.5, 0)
+position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_vcm44")
 
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(120.75, 0.5)
+position = Vector2(133.75, 0.5)
 shape = SubResource("RectangleShape2D_nus4t")
 
 [node name="InteractArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2(120.5, 0)
+position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_opfti")
