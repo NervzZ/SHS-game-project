@@ -24,6 +24,7 @@ SaveFile="*res://scripts/save_file.gd"
 window/size/viewport_width=3840
 window/size/viewport_height=2160
 window/size/mode=4
+mouse_cursor/custom_image="res://graphics/System Graphics/Cursor.png"
 
 [input]
 

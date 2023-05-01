@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://diqvddyet2bnn"]
+
+[ext_resource type="Texture2D" uid="uid://dy3p60qehe2mi" path="res://graphics/Interior Design/Desks.png" id="1_ucbyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnujs"]
+size = Vector2(432.108, 138.07)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_he3yf"]
+size = Vector2(120.172, 40.9098)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u47i"]
+size = Vector2(115.058, 40.0575)
+
+[node name="Desk_for_two" type="Sprite2D"]
+position = Vector2(2449.57, 2304.6)
+texture = ExtResource("1_ucbyo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2.41626, 12.2048)
+shape = SubResource("RectangleShape2D_jnujs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(130.54, -74.728)
+shape = SubResource("RectangleShape2D_he3yf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-126.85, 104.678)
+shape = SubResource("RectangleShape2D_3u47i")

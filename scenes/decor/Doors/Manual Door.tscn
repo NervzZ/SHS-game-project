@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhyr0cyu7tax"]
+
+[ext_resource type="Texture2D" uid="uid://1ag5dvu756sy" path="res://graphics/Interior Design/door.png" id="1_pxs71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22rn3"]
+size = Vector2(239.333, 36.3027)
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(861.548, 2.8425)
+texture = ExtResource("1_pxs71")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-16.7582, -261.574)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(19.0456, 263.179)
+shape = SubResource("RectangleShape2D_22rn3")

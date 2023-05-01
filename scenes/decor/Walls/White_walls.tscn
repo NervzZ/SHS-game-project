@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://pqm6aahkwojd"]
 
-[ext_resource type="Texture2D" uid="uid://ejunwpi627jw" path="res://graphics/Walls_svg/White_wall.png" id="1_34myj"]
+[ext_resource type="Texture2D" uid="uid://e1kluak23sdx" path="res://graphics/Interior Design/Interior Walls.png" id="1_erde3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22rn3"]
-size = Vector2(921, 38)
+size = Vector2(698.601, 81.5201)
 
 [node name="Sprite2D" type="Sprite2D"]
-position = Vector2(719, 43)
-texture = ExtResource("1_34myj")
+position = Vector2(1002.36, 126.238)
+texture = ExtResource("1_erde3")
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.5, 0)
+position = Vector2(0.921204, 0.635605)
 shape = SubResource("RectangleShape2D_22rn3")
