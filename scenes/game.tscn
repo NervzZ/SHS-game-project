@@ -1,13 +1,16 @@
-[gd_scene load_steps=22 format=3 uid="uid://crbygnkslpwet"]
+[gd_scene load_steps=27 format=3 uid="uid://crbygnkslpwet"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6p03n"]
 [ext_resource type="PackedScene" path="res://scenes/decor/Walls/BrickWall.tscn" id="1_wo4cv"]
-[ext_resource type="Texture2D" uid="uid://c760dqojjxc6a" path="res://graphics/Interior Design/Out.png" id="2_0ocqp"]
+[ext_resource type="Texture2D" uid="uid://diygnxnganwm" path="res://graphics/Outside world/Porcelaine .png" id="2_0sq54"]
 [ext_resource type="PackedScene" uid="uid://csl8eburfsk8q" path="res://scenes/actors/main_character.tscn" id="2_5t6ty"]
 [ext_resource type="Texture2D" uid="uid://b0t1amiojrw53" path="res://graphics/Interior Design/CustomFloor.png" id="2_or8f2"]
+[ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="2_vd3cl"]
+[ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="3_02sya"]
 [ext_resource type="PackedScene" uid="uid://pqm6aahkwojd" path="res://scenes/decor/Walls/White_walls.tscn" id="3_e1y6a"]
 [ext_resource type="Texture2D" uid="uid://erm1j76i31vm" path="res://scenes/decor/Cybershield Logo.png" id="3_huxwr"]
 [ext_resource type="Texture2D" uid="uid://clddrp2g2n6oa" path="res://graphics/Interior Design/Terrace Floor.png" id="4_bb2vd"]
+[ext_resource type="PackedScene" uid="uid://cn5ffqkqyisxq" path="res://elevator.tscn" id="6_lvai6"]
 [ext_resource type="PackedScene" uid="uid://bpjqphgqrmw6i" path="res://scenes/decor/desk_for_two_one_person.tscn" id="8_kh4ku"]
 [ext_resource type="Texture2D" uid="uid://ba28n63xyla0w" path="res://graphics/Interior Design/Corner greenery.png" id="9_1tmi7"]
 [ext_resource type="PackedScene" uid="uid://bsuhh3oxbi8fv" path="res://desk_for_two.tscn" id="10_8lms1"]
@@ -21,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://bm0771r85u6xv" path="res://sitting_curve_out.tscn" id="16_54nm6"]
 [ext_resource type="PackedScene" uid="uid://b5gqwnoteeild" path="res://tennis_table.tscn" id="17_kffhb"]
 [ext_resource type="PackedScene" uid="uid://c70jggycr1s5g" path="res://scenes/decor/desk_for_two_yellow.tscn" id="21_1dcdr"]
+[ext_resource type="Texture2D" uid="uid://cmw46mebccgjc" path="res://graphics/Outside world/Black.png" id="24_6lw7x"]
+[ext_resource type="Texture2D" uid="uid://bug0n8ruhbaa1" path="res://graphics/Outside world/Elevator Sign.png" id="26_f873b"]
 
 [node name="GameRoot" type="Node2D"]
 position = Vector2(-10.6824, -0.763031)
@@ -28,16 +33,111 @@ script = ExtResource("1_6p03n")
 
 [node name="Outside Decore" type="Node2D" parent="."]
 
+[node name="Outside Life" type="Node2D" parent="Outside Decore"]
+
+[node name="PatternCity" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(2478.4, 9207.26)
+texture = ExtResource("2_vd3cl")
+
+[node name="PatternCity2" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(1547.23, 5837.31)
+texture = ExtResource("2_vd3cl")
+
+[node name="PatternCity3" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(2853.45, 4277.3)
+texture = ExtResource("2_vd3cl")
+
+[node name="PatternCity5" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(2862.8, -1694.62)
+scale = Vector2(1.00397, 1)
+texture = ExtResource("2_vd3cl")
+
+[node name="PatternCity6" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(3320.89, -2486.79)
+texture = ExtResource("2_vd3cl")
+
+[node name="PatternCity7" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(3788.49, -1676.55)
+texture = ExtResource("2_vd3cl")
+
+[node name="BeachPattern" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(8461.25, 1695.44)
+texture = ExtResource("3_02sya")
+
+[node name="BeachPattern2" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(8461.39, 5067.49)
+texture = ExtResource("3_02sya")
+flip_v = true
+
+[node name="BeachPattern5" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(8462.31, -5051.78)
+texture = ExtResource("3_02sya")
+
+[node name="BeachPattern6" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(8462.45, -1679.72)
+texture = ExtResource("3_02sya")
+flip_v = true
+
+[node name="BeachPattern3" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(8462.02, 8440.96)
+texture = ExtResource("3_02sya")
+
+[node name="BeachPattern4" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(8462.16, 11813)
+texture = ExtResource("3_02sya")
+flip_v = true
+
+[node name="Porcelaine" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-3143.89, 1356.8)
+texture = ExtResource("2_0sq54")
+
+[node name="Black" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-2164.52, 3548.04)
+scale = Vector2(31.1461, 158.05)
+texture = ExtResource("24_6lw7x")
+
+[node name="Black3" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-2151.72, -595.265)
+scale = Vector2(30.9673, 131.84)
+texture = ExtResource("24_6lw7x")
+
+[node name="Black2" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-495.93, 2150.48)
+scale = Vector2(5.46368, 25.2015)
+texture = ExtResource("24_6lw7x")
+
+[node name="Black4" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-494.594, 580.083)
+scale = Vector2(5.46368, 25.2015)
+texture = ExtResource("24_6lw7x")
+
+[node name="Elevator" parent="Outside Decore/Outside Life" instance=ExtResource("6_lvai6")]
+
+[node name="Elevator2" parent="Outside Decore/Outside Life" instance=ExtResource("6_lvai6")]
+position = Vector2(-1559.72, 2231.77)
+rotation = 3.14159
+
+[node name="ElevatorSign" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-1554.58, 819.812)
+scale = Vector2(0.418562, 0.418562)
+texture = ExtResource("26_f873b")
+
+[node name="ElevatorSign2" type="Sprite2D" parent="Outside Decore/Outside Life"]
+position = Vector2(-1547.86, 1909.09)
+scale = Vector2(0.418562, 0.418562)
+texture = ExtResource("26_f873b")
+flip_v = true
+
 [node name="SurrBrickWall" type="Node2D" parent="Outside Decore"]
 
 [node name="Brick_Wall" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
-position = Vector2(211.019, -6.72985)
-scale = Vector2(1, 0.233806)
+position = Vector2(210.651, -6.72985)
+scale = Vector2(1.00184, 0.233806)
 
 [node name="Brick_Wall25" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
-position = Vector2(-60.6351, 197.393)
+position = Vector2(-60.635, 180.119)
 rotation = 1.5708
-scale = Vector2(1, 0.554868)
+scale = Vector2(1.08637, 0.554868)
 
 [node name="Brick_Wall33" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
 position = Vector2(1637.29, -177.246)
@@ -48,21 +148,6 @@ scale = Vector2(1, 0.233806)
 position = Vector2(-60.7493, 588.695)
 rotation = 1.5708
 scale = Vector2(1, 0.551251)
-
-[node name="Brick_Wall27" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
-position = Vector2(-60.6323, 976.633)
-rotation = 1.5708
-scale = Vector2(1, 0.556677)
-
-[node name="Brick_Wall28" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
-position = Vector2(-59.9236, 1372.94)
-rotation = 1.5708
-scale = Vector2(1, 0.546729)
-
-[node name="Brick_Wall29" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
-position = Vector2(-59.9612, 1765.9)
-rotation = 1.5708
-scale = Vector2(1, 0.547567)
 
 [node name="Brick_Wall30" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
 position = Vector2(-61.5019, 2265.52)
@@ -256,14 +341,15 @@ scale = Vector2(1, 0.233806)
 position = Vector2(609.978, 2543.14)
 scale = Vector2(1, 0.233806)
 
+[node name="Brick_Wall41" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
+position = Vector2(2773.28, -175.85)
+rotation = 1.57081
+scale = Vector2(1, 0.233806)
+skew = -1.46627e-05
+
 [node name="Brick_Wall15" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
 position = Vector2(1009.05, 2543.01)
 scale = Vector2(1, 0.233806)
-
-[node name="Brick_Wall34" parent="Outside Decore/SurrBrickWall/Brick_Wall15" instance=ExtResource("1_wo4cv")]
-position = Vector2(1764.23, -11628.7)
-rotation = 1.5708
-scale = Vector2(4.27706, 0.233806)
 
 [node name="Brick_Wall16" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
 position = Vector2(1408.29, 2542.94)
@@ -300,327 +386,6 @@ scale = Vector2(1, 0.233806)
 [node name="Brick_Wall24" parent="Outside Decore/SurrBrickWall" instance=ExtResource("1_wo4cv")]
 position = Vector2(4454.36, 2542.8)
 scale = Vector2(0.269, 0.233806)
-
-[node name="Outside Life" type="Node2D" parent="Outside Decore"]
-visible = false
-
-[node name="Out" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-351.38, 502.947)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out2" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-354.951, 1592.28)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out3" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-958.961, 512.404)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out4" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-965.241, 1592.35)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out5" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-1576.52, 505.762)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out6" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-1576.69, 1592.54)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out7" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-355.375, 2678.46)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out22" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(256.527, 2677.62)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out23" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(866.449, 2683.28)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out48" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(256.43, 3764.42)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out49" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(866.352, 3770.08)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out50" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-965.723, 3759.44)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out51" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-355.801, 3765.1)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out52" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(1478.02, 3769.59)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out53" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2087.95, 3775.25)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out54" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2699.95, 3774.93)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out55" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3309.87, 3780.59)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out56" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3921.64, 3780.57)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out57" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(4531.56, 3786.23)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out24" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(1478.24, 2682.88)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out25" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2088.17, 2688.54)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out26" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2700.45, 2688.61)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out27" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3310.38, 2694.27)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out28" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3922.37, 2693.46)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out40" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3923.07, -357.845)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out41" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(4536.55, -357.857)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out30" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(262.152, -369.546)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out36" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-350.423, -240.725)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out37" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-965.818, -240.784)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out38" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-958.031, -241.982)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out39" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-1577.53, -238.962)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out31" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(874.064, -368.429)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out32" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(1483.99, -362.77)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out33" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2096.27, -362.697)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out42" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(1484.05, -1448.82)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out43" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2096.11, -1449.22)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out44" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(261.798, -1453.82)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out45" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(873.857, -1454.21)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out46" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2706.11, -1443.05)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out47" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3318.17, -1443.45)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out34" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(2706.2, -357.039)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out35" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(3318.19, -357.85)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out29" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(4532.29, 2699.11)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out8" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-965.664, 2678.53)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out9" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-1577.11, 2678.72)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out10" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(10139.5, 173.724)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out11" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(10139.3, 1260.5)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out12" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(4862.31, 202.362)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out13" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(4862.14, 1289.14)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_v = true
-
-[node name="Out14" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(10138.9, 2346.68)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out15" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(4861.72, 2375.32)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-
-[node name="Out16" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(11362.1, 173.517)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_h = true
-
-[node name="Out17" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(11361.9, 1260.29)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_h = true
-flip_v = true
-
-[node name="Out18" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(10750.6, 173.705)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_h = true
-
-[node name="Out19" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(10750.5, 1260.48)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_h = true
-flip_v = true
-
-[node name="Out20" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(11361.5, 2346.48)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_h = true
-
-[node name="Out21" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(10750.1, 2346.66)
-scale = Vector2(0.565967, 0.565967)
-texture = ExtResource("2_0ocqp")
-flip_h = true
 
 [node name="Inside" type="Node2D" parent="."]
 
@@ -1381,21 +1146,21 @@ position = Vector2(4839.98, 4663.36)
 rotation = -1.5708
 
 [node name="MeetingTable2" parent="Inside/Desks & Meeting" instance=ExtResource("12_l4rbj")]
-position = Vector2(5768.2, 7132.58)
+position = Vector2(5766.99, 7041.84)
 rotation = 3.14159
 
 [node name="MeetingTable3" parent="Inside/Desks & Meeting" instance=ExtResource("12_l4rbj")]
 position = Vector2(4922.68, 3219.11)
 
 [node name="MeetingTable4" parent="Inside/Desks & Meeting" instance=ExtResource("12_l4rbj")]
-position = Vector2(5259.74, 4159.29)
+position = Vector2(5284.75, 4066.94)
 rotation = 3.48787e-16
 
 [node name="MeetingTable5" parent="Inside/Desks & Meeting" instance=ExtResource("12_l4rbj")]
 position = Vector2(8493.08, 6647.45)
 
 [node name="MeetingTable6" parent="Inside/Desks & Meeting" instance=ExtResource("12_l4rbj")]
-position = Vector2(7360.54, 7143.09)
+position = Vector2(7358.62, 7025.72)
 rotation = 3.14159
 
 [node name="Desk_for_two17" parent="Inside/Desks & Meeting" instance=ExtResource("11_uj573")]
@@ -1424,6 +1189,47 @@ position = Vector2(8647.4, 4500.73)
 [node name="Sprite2D" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
 position = Vector2(479.51, 1060.45)
 scale = Vector2(1.34978, 1)
+
+[node name="Sprite2D32" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-459.801, 822.038)
+scale = Vector2(1.34978, 1)
+
+[node name="Sprite2D34" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-28.9709, 982.537)
+rotation = 1.5708
+scale = Vector2(0.342305, 1)
+
+[node name="Sprite2D35" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-28.0538, 1743.17)
+rotation = 1.5708
+scale = Vector2(0.372369, 1)
+
+[node name="Sprite2D36" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-889.722, 662.022)
+rotation = 1.5708
+scale = Vector2(0.342305, 1)
+
+[node name="Sprite2D37" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-891.473, 2080.58)
+rotation = 1.5708
+scale = Vector2(0.372369, 1)
+
+[node name="Sprite2D33" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-459.737, 1910.61)
+scale = Vector2(1.34978, 1)
+
+[node name="Sprite2D38" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-1520.19, 500.579)
+scale = Vector2(1.91667, 1)
+
+[node name="Sprite2D39" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-1521.01, 2250.02)
+scale = Vector2(1.91605, 1)
+
+[node name="Sprite2D40" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
+position = Vector2(-2231.63, 1373.3)
+rotation = 1.5708
+scale = Vector2(2.61634, 1)
 
 [node name="Sprite2D7" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
 position = Vector2(8515.35, 3279.25)
@@ -1514,16 +1320,16 @@ position = Vector2(5077.78, 5370.63)
 scale = Vector2(1.66612, 0.340031)
 
 [node name="Sprite2D27" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
-position = Vector2(4861.86, 4516.04)
-scale = Vector2(1.21478, 1)
+position = Vector2(4896.06, 4516.04)
+scale = Vector2(1.11705, 1)
 
 [node name="Sprite2D28" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
 position = Vector2(5663.47, 6229.79)
 scale = Vector2(1.34978, 1)
 
 [node name="Sprite2D29" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
-position = Vector2(4795.61, 6231.16)
-scale = Vector2(1.19983, 1)
+position = Vector2(4859.33, 6231.16)
+scale = Vector2(1.01777, 1)
 
 [node name="Sprite2D30" parent="Inside/Interior Walls & Windows" instance=ExtResource("3_e1y6a")]
 position = Vector2(6107.06, 4894.32)
