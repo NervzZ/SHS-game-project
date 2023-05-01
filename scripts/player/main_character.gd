@@ -2,26 +2,14 @@ extends CharacterBody2D
 
 
 @export var walkVelocity = 500
-#@export var friction = 100
+
 
 var mouseTarget = Vector2.ZERO
 
 @onready var animatedSprite = get_node("AnimatedSprite2D")
 
-#var SCREEN_WIDTH = get_viewport_rect().size.x
-#var SCREEN_HEIGHT = get_viewport_rect().size.y
-
-# plus tard on se décidera sur la camera
-#var camera_holder
-#var camera
 
 
-func _ready():
-	#camera_holder = Node2D.new()
-	#add_child(camera_holder)
-	#camera = get_node("Camera2D")
-	#camera_holder.position = position
-	pass
 	
 func _get_position():
 	return position

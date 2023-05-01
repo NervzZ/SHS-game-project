@@ -1,34 +1,27 @@
 extends Node2D
-@export var MainMenu : PackedScene
-var offset = Vector2(-960, -540)
 
 @export var resume : Button
 @export var quit : Button
-
-@onready var character = ($"../Main Character")
-
+@onready var container : MarginContainer = get_node("MarginContainer")
 
 func _ready():
 	resume.button_down.connect(_on_continue_button_pressed)
 	quit.button_down.connect(_on_quit_button_pressed)
-
-
-
-#faudra changer ça pour simplement lier le menu à la camera du joueur comme ça il y a jamais besoin
-#de update la position
-func _process(_delta):
-	position = character.position + offset
-
+	var menuSize = container.get_size()
+	var viewportSize = get_viewport_rect().size
+	var offsetx = viewportSize.x / 2 - menuSize.x /2
+	var offsety = viewportSize.y /2 - menuSize.y /2
+	position.x = offsetx
+	position.y = offsety
+	
 func openMenu():
 	show()
 	get_tree().paused = true
 	
 func _on_continue_button_pressed():
-	print("pressed")
 	hide()
 	get_tree().paused = false
 
 
 func _on_quit_button_pressed():
-	print("pressed")
 	get_tree().quit()
