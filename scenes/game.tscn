@@ -3,27 +3,27 @@
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6p03n"]
 [ext_resource type="PackedScene" path="res://scenes/decor/Walls/BrickWall.tscn" id="1_wo4cv"]
 [ext_resource type="Texture2D" uid="uid://diygnxnganwm" path="res://graphics/Outside world/Porcelaine .png" id="2_0sq54"]
-[ext_resource type="PackedScene" uid="uid://csl8eburfsk8q" path="res://scenes/actors/main_character.tscn" id="2_5t6ty"]
-[ext_resource type="Texture2D" uid="uid://b0t1amiojrw53" path="res://graphics/Interior Design/CustomFloor.png" id="2_or8f2"]
+[ext_resource type="Texture2D" path="res://graphics/Interior Design/CustomFloor.png" id="2_or8f2"]
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="2_vd3cl"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="3_02sya"]
-[ext_resource type="PackedScene" uid="uid://pqm6aahkwojd" path="res://scenes/decor/Walls/White_walls.tscn" id="3_e1y6a"]
-[ext_resource type="Texture2D" uid="uid://erm1j76i31vm" path="res://scenes/decor/Cybershield Logo.png" id="3_huxwr"]
-[ext_resource type="Texture2D" uid="uid://clddrp2g2n6oa" path="res://graphics/Interior Design/Terrace Floor.png" id="4_bb2vd"]
-[ext_resource type="PackedScene" uid="uid://cn5ffqkqyisxq" path="res://elevator.tscn" id="6_lvai6"]
-[ext_resource type="PackedScene" uid="uid://bpjqphgqrmw6i" path="res://scenes/decor/desk_for_two_one_person.tscn" id="8_kh4ku"]
-[ext_resource type="Texture2D" uid="uid://ba28n63xyla0w" path="res://graphics/Interior Design/Corner greenery.png" id="9_1tmi7"]
-[ext_resource type="PackedScene" uid="uid://bsuhh3oxbi8fv" path="res://desk_for_two.tscn" id="10_8lms1"]
-[ext_resource type="PackedScene" uid="uid://bcn7huivsd0ul" path="res://scenes/decor/Bench_outside.tscn" id="10_mhndk"]
-[ext_resource type="PackedScene" uid="uid://7s8qe67kcnip" path="res://small_greenery.tscn" id="11_fxfd3"]
-[ext_resource type="PackedScene" uid="uid://diqvddyet2bnn" path="res://scenes/decor/desk_for_two.tscn" id="11_uj573"]
-[ext_resource type="PackedScene" uid="uid://bvwhdr50mwby4" path="res://scenes/decor/meeting_table.tscn" id="12_l4rbj"]
-[ext_resource type="PackedScene" uid="uid://dk880qt6gag74" path="res://important_meeting_table.tscn" id="13_tmy3g"]
-[ext_resource type="PackedScene" uid="uid://ticeiiy5hf44" path="res://vertical_greenery.tscn" id="15_772ue"]
-[ext_resource type="PackedScene" uid="uid://dlyi1flg7tdr0" path="res://scenes/decor/WallWindow.tscn" id="15_ap3vs"]
-[ext_resource type="PackedScene" uid="uid://bm0771r85u6xv" path="res://sitting_curve_out.tscn" id="16_54nm6"]
-[ext_resource type="PackedScene" uid="uid://b5gqwnoteeild" path="res://tennis_table.tscn" id="17_kffhb"]
-[ext_resource type="PackedScene" uid="uid://c70jggycr1s5g" path="res://scenes/decor/desk_for_two_yellow.tscn" id="21_1dcdr"]
+[ext_resource type="PackedScene" path="res://scenes/decor/Walls/White_walls.tscn" id="3_e1y6a"]
+[ext_resource type="Texture2D" path="res://scenes/decor/Cybershield Logo.png" id="3_huxwr"]
+[ext_resource type="Texture2D" path="res://graphics/Interior Design/Terrace Floor.png" id="4_bb2vd"]
+[ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player_spawn.tscn" id="6_h1j12"]
+[ext_resource type="PackedScene" path="res://elevator.tscn" id="6_lvai6"]
+[ext_resource type="PackedScene" path="res://scenes/decor/desk_for_two_one_person.tscn" id="8_kh4ku"]
+[ext_resource type="Texture2D" path="res://graphics/Interior Design/Corner greenery.png" id="9_1tmi7"]
+[ext_resource type="PackedScene" path="res://desk_for_two.tscn" id="10_8lms1"]
+[ext_resource type="PackedScene" path="res://scenes/decor/Bench_outside.tscn" id="10_mhndk"]
+[ext_resource type="PackedScene" path="res://small_greenery.tscn" id="11_fxfd3"]
+[ext_resource type="PackedScene" path="res://scenes/decor/desk_for_two.tscn" id="11_uj573"]
+[ext_resource type="PackedScene" path="res://scenes/decor/meeting_table.tscn" id="12_l4rbj"]
+[ext_resource type="PackedScene" path="res://important_meeting_table.tscn" id="13_tmy3g"]
+[ext_resource type="PackedScene" path="res://vertical_greenery.tscn" id="15_772ue"]
+[ext_resource type="PackedScene" path="res://scenes/decor/WallWindow.tscn" id="15_ap3vs"]
+[ext_resource type="PackedScene" path="res://sitting_curve_out.tscn" id="16_54nm6"]
+[ext_resource type="PackedScene" path="res://tennis_table.tscn" id="17_kffhb"]
+[ext_resource type="PackedScene" path="res://scenes/decor/desk_for_two_yellow.tscn" id="21_1dcdr"]
 [ext_resource type="Texture2D" uid="uid://cmw46mebccgjc" path="res://graphics/Outside world/Black.png" id="24_6lw7x"]
 [ext_resource type="Texture2D" uid="uid://bug0n8ruhbaa1" path="res://graphics/Outside world/Elevator Sign.png" id="26_f873b"]
 
@@ -1556,9 +1556,5 @@ position = Vector2(8854.45, 2366.75)
 rotation = 3.14159
 texture = ExtResource("9_1tmi7")
 
-[node name="Main Character" parent="." instance=ExtResource("2_5t6ty")]
-position = Vector2(265.376, 1371.08)
-
-[node name="Camera2D" type="Camera2D" parent="Main Character"]
-position = Vector2(1, 0)
-position_smoothing_enabled = true
+[node name="PlayerSpawn" parent="." instance=ExtResource("6_h1j12")]
+position = Vector2(343.682, 1357.76)
