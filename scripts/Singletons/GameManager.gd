@@ -12,8 +12,9 @@ var playerInventory : Array = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	Input.set_custom_mouse_cursor(load("res://graphics/UI/pointerArrow.png"), Input.CURSOR_ARROW)
-	Input.set_custom_mouse_cursor(load("res://graphics/UI/pointerHandPink.png"), Input.CURSOR_POINTING_HAND)
+	var hotspot = Vector2(20, 1)
+	Input.set_custom_mouse_cursor(load("res://graphics/UI/pointerArrow.png"), Input.CURSOR_ARROW, hotspot)
+	Input.set_custom_mouse_cursor(load("res://graphics/UI/pointerHandPink.png"), Input.CURSOR_POINTING_HAND, hotspot)
 	var root = get_tree().root
 	pause_menu.hide()
 	current_scene = root.get_child(root.get_child_count() - 1)
