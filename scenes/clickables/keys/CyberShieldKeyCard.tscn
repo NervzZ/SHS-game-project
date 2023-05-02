@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://4hlfarhbqile"]
+
+[ext_resource type="Script" path="res://scripts/clickables/inventoryItems/key.gd" id="1_0rmpr"]
+[ext_resource type="Texture2D" uid="uid://cg6o83bhmsrbl" path="res://graphics/items/keycard.png" id="2_5o2g2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwkgp"]
+size = Vector2(57.5, 40.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0ad6"]
+radius = 114.004
+
+[node name="CyberShieldKeyCard" type="Node2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
+script = ExtResource("1_0rmpr")
+key_name = "Cyber Shield Keycard"
+clickableArea = NodePath("ClickArea")
+interactArea = NodePath("InteractArea")
+mainSprite = NodePath("MainSprite")
+ThickerHighlight = true
+
+[node name="MainSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_5o2g2")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("RectangleShape2D_uwkgp")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_i0ad6")
