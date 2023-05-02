@@ -16,9 +16,8 @@ func _ready():
 	add_child(UI)
 	UI.add_child(pause_menu)
 	UI.add_child(clock)
-	clock.set_time(8, 32)
 	initPlayer()
-	goto_scene(levels.MAIN_LEVEL)
+	goto_scene(levels.MAIN_LEVEL, 8, 32)
 	print(levels.MAIN_LEVEL)
 
 func initPlayer():
@@ -48,7 +47,7 @@ func spawnPlayerIfExist():
 		playerSpawn.hide()
 		spawnPlayer()
 
-func goto_scene(path):
+func goto_scene(path: String, hours : int, minutes : int):
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
 	# Deleting the current scene at this point is
@@ -59,6 +58,7 @@ func goto_scene(path):
 	# we can be sure that no code from the current scene is running:
 
 	call_deferred("_deferred_goto_scene", path)
+	clock.set_time(hours, minutes)
 	
 func _deferred_goto_scene(path):
 	# It is now safe to remove the current scene
