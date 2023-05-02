@@ -1621,4 +1621,4 @@ rotation = 1.5708
 position = Vector2(-1603.77, 687.677)
 actor_to_spawn = ExtResource("26_50mvd")
 spawn_hours = 9
-spawn_minutes = 35
+spawn_minutes = 25
