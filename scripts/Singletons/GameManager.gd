@@ -4,6 +4,7 @@ extends Node2D
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
 var playerSpawn : Node2D
 var player : CharacterBody2D = load("res://scenes/actors/player/main_character.tscn").instantiate()
+var clock : Node2D = load("res://scenes/UI/clock.tscn").instantiate()
 var UI : CanvasLayer = CanvasLayer.new()
 var current_scene = null
 
@@ -14,6 +15,8 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 	add_child(UI)
 	UI.add_child(pause_menu)
+	UI.add_child(clock)
+	clock.set_time(8, 32)
 	initPlayer()
 	goto_scene(levels.MAIN_LEVEL)
 	print(levels.MAIN_LEVEL)

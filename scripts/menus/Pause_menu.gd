@@ -11,8 +11,7 @@ func _ready():
 	var viewportSize = get_viewport_rect().size
 	var offsetx = viewportSize.x / 2 - menuSize.x /2
 	var offsety = viewportSize.y /2 - menuSize.y /2
-	position.x = offsetx
-	position.y = offsety
+	set_position(Vector2(offsetx, offsety))
 	
 func openMenu():
 	show()
