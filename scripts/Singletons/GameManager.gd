@@ -7,6 +7,7 @@ var player : CharacterBody2D = load("res://scenes/actors/player/main_character.t
 var clock : Node2D = load("res://scenes/UI/clock.tscn").instantiate()
 var UI : CanvasLayer = CanvasLayer.new()
 var current_scene = null
+var playerInventory : Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

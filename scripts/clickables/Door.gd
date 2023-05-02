@@ -21,13 +21,19 @@ func clickedEvent():
 	tween.finished.connect(_on_finished)
 	
 	if (isClosed):
-		tween.tween_property(self, "rotation", openRotation, openSpeed)
-		isClosed = false
-		obstacle.disabled = true
+		open()
 	else:
-		tween.tween_property(self, "rotation", closedRotation, openSpeed)
-		isClosed = true
+		close()
 	
 func _on_finished():
 	if isClosed:
 		obstacle.disabled = false
+
+func open():
+	tween.tween_property(self, "rotation", openRotation, openSpeed)
+	isClosed = false
+	obstacle.disabled = true
+
+func close():
+	tween.tween_property(self, "rotation", closedRotation, openSpeed)
+	isClosed = true
