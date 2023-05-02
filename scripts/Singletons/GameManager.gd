@@ -4,6 +4,7 @@ extends Node2D
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
 var playerSpawn : Node2D
 var player : CharacterBody2D = load("res://scenes/actors/player/main_character.tscn").instantiate()
+var clock : Node2D = load("res://scenes/UI/clock.tscn").instantiate()
 var UI : CanvasLayer = CanvasLayer.new()
 var current_scene = null
 
@@ -14,8 +15,9 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 	add_child(UI)
 	UI.add_child(pause_menu)
+	UI.add_child(clock)
 	initPlayer()
-	goto_scene(levels.MAIN_LEVEL)
+	goto_scene(levels.MAIN_LEVEL, 8, 32)
 	print(levels.MAIN_LEVEL)
 
 func initPlayer():
@@ -45,7 +47,7 @@ func spawnPlayerIfExist():
 		playerSpawn.hide()
 		spawnPlayer()
 
-func goto_scene(path):
+func goto_scene(path: String, hours : int, minutes : int):
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
 	# Deleting the current scene at this point is
@@ -56,6 +58,7 @@ func goto_scene(path):
 	# we can be sure that no code from the current scene is running:
 
 	call_deferred("_deferred_goto_scene", path)
+	clock.set_time(hours, minutes)
 	
 func _deferred_goto_scene(path):
 	# It is now safe to remove the current scene
