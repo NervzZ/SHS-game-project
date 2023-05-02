@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://djg32yldgdypy"]
+[gd_scene load_steps=29 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -25,11 +25,12 @@
 [ext_resource type="PackedScene" uid="uid://7s8qe67kcnip" path="res://scenes/decor/exterior/small_greenery.tscn" id="24_isf5y"]
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="25_lgtp3"]
 [ext_resource type="PackedScene" uid="uid://b7pr1db134ox8" path="res://scenes/actors/npc/npc.tscn" id="26_50mvd"]
-[ext_resource type="PackedScene" uid="uid://c5myudfhh3qkr" path="res://scenes/clickables/lockableDoor.tscn" id="27_c3i8h"]
+[ext_resource type="PackedScene" uid="uid://c5myudfhh3qkr" path="res://scenes/clickables/doors/lockableDoor.tscn" id="27_c3i8h"]
 [ext_resource type="PackedScene" uid="uid://l4q5613k0jbr" path="res://scenes/actors/Spawner.tscn" id="27_dk0iy"]
+[ext_resource type="PackedScene" uid="uid://4hlfarhbqile" path="res://scenes/clickables/keys/CyberShieldKeyCard.tscn" id="28_v743i"]
 
 [node name="Office" type="Node2D"]
-position = Vector2(-10.6824, -0.763031)
+position = Vector2(82, 567)
 rotation = -1.5708
 
 [node name="Outside Decore" type="Node2D" parent="."]
@@ -1623,3 +1624,8 @@ spawn_minutes = 25
 position = Vector2(17.2325, 1225.68)
 rotation = 1.5708
 keyName = "Cyber Shield Keycard"
+
+[node name="CyberShieldKeyCard" parent="." instance=ExtResource("28_v743i")]
+position = Vector2(-1118.77, 2082.68)
+rotation = -0.497419
+ThickerHighlight = true

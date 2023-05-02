@@ -2,7 +2,8 @@ extends Node2D
 
 @export var clickableArea : Area2D
 @export var interactArea : Area2D
-@export var mainSprite : Sprite2D 
+@export var mainSprite : Sprite2D
+@export var ThickerHighlight : bool = false
 
 var mouseIsHovering : bool = false
 var playerIsInRange : bool = false
@@ -24,7 +25,10 @@ func _ready():
 	if (mainSprite == null):
 		push_error("ERROR : %s needs a mainSprite. Please set it from the inspector." % name)
 	
-	highlightShader.set_shader(load("res://shaders/highlight.gdshader"))
+	if ThickerHighlight:
+		highlightShader.set_shader(load("res://shaders/highlightThick.gdshader"))
+	else:
+		highlightShader.set_shader(load("res://shaders/highlight.gdshader"))
 	init()
 	clickableArea.mouse_entered.connect(_on_mouse_enter)
 	clickableArea.mouse_exited.connect(_on_mouse_exit)
