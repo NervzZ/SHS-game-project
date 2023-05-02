@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://djf146ud17gr4"]
+[gd_scene load_steps=5 format=3 uid="uid://djf146ud17gr4"]
 
-[ext_resource type="Script" path="res://scripts/menus/main_menu.gd" id="1_3n6lb"]
+[ext_resource type="Script" path="res://scripts/menus/main_menu_corr.gd" id="1_nqkdi"]
+[ext_resource type="PackedScene" uid="uid://djg32yldgdypy" path="res://scenes/levels/office.tscn" id="2_3ce12"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
 bg_color = Color(0.376471, 0.631373, 0.803922, 1)
@@ -14,7 +15,8 @@ bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 
 [node name="MainMenu" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_3n6lb")
+script = ExtResource("1_nqkdi")
+level = ExtResource("2_3ce12")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 3830.0
@@ -53,7 +55,7 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 600
 
-[node name="StatGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer"]
+[node name="StartGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer"]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 170
@@ -80,9 +82,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
 text = "Exit
 "
 
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_stat_game_button_down"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_stat_game_button_up"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StartGame" to="." method="_on_start_game_button_down"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StartGame" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StartGame" to="." method="_on_stat_game_button_up"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_up"]

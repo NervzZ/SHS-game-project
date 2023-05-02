@@ -2,14 +2,14 @@ extends CharacterBody2D
 
 
 @export var walkVelocity = 500
-
-
+var running_coeff = 1.7
 var mouseTarget = Vector2.ZERO
 @onready var footsteps: AudioStreamPlayer2D = get_node("Footsteps")
 @onready var animatedSprite = get_node("AnimatedSprite2D")
 
 
-
+func _ready():
+	pass
 	
 func _get_position():
 	return position
@@ -18,7 +18,13 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		mouseTarget = get_global_mouse_position()
 		
+func is_running():
+	if Input.is_action_pressed("Run"):
 		
+		return true
+	return false
+	
+
 func _process(_delta):
 	
 	computeLookTarget()
@@ -26,16 +32,25 @@ func _process(_delta):
 	#Up-down movements
 	if Input.is_action_pressed("Move Up") and !Input.is_action_pressed("Move Down"):
 		velocity.y = -walkVelocity
+		if is_running():
+			velocity.y = velocity.y * running_coeff
+		
 	elif Input.is_action_pressed("Move Down") and !Input.is_action_pressed("Move Up"):
 		velocity.y = walkVelocity
+		if is_running():
+			velocity.y = velocity.y * running_coeff
 	else:
 		velocity.y = 0
 		
 	#Left-right movements
 	if Input.is_action_pressed("Move Right") and !Input.is_action_pressed("Move Left"):
 		velocity.x = walkVelocity
+		if is_running():
+			velocity.x = velocity.x * running_coeff
 	elif Input.is_action_pressed("Move Left") and !Input.is_action_pressed("Move Right"):
 		velocity.x = -walkVelocity
+		if is_running():
+			velocity.x = velocity.x * running_coeff
 	else:
 		velocity.x = 0
 		

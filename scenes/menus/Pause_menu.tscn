@@ -13,7 +13,7 @@ corner_radius_bottom_left = 5
 bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 
 [node name="PauseMenu" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
-process_mode = 3
+process_mode = 2
 script = ExtResource("1_ydcl2")
 resume = NodePath("MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/Continue")
 quit = NodePath("MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Quit")

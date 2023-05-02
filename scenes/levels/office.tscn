@@ -98,8 +98,8 @@ scale = Vector2(31.1461, 158.05)
 texture = ExtResource("4_7wn0e")
 
 [node name="Black5" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-3221.32, 1379.41)
-scale = Vector2(14.6308, 113.544)
+position = Vector2(-3224.79, 1491.87)
+scale = Vector2(14.6308, 129.353)
 texture = ExtResource("4_7wn0e")
 
 [node name="Black3" type="Sprite2D" parent="Outside Decore/Outside Life"]
@@ -206,7 +206,7 @@ rotation = 1.5708
 scale = Vector2(1, 0.556677)
 
 [node name="Brick_Wall43" parent="Outside Decore/SurrBrickWall" instance=ExtResource("7_onqm4")]
-position = Vector2(4433.63, 7383)
+position = Vector2(4437.79, 7382.23)
 rotation = 1.5708
 scale = Vector2(1.4167, 0.557574)
 
@@ -510,8 +510,8 @@ scale = Vector2(0.934716, 0.683368)
 texture = ExtResource("9_e5tye")
 
 [node name="Floor103" type="Sprite2D" parent="Inside/Design/Floor"]
-position = Vector2(7900.92, 1765.01)
-scale = Vector2(0.934716, 0.683368)
+position = Vector2(7932.83, 1765.01)
+scale = Vector2(1.06235, 0.683368)
 texture = ExtResource("9_e5tye")
 
 [node name="Floor104" type="Sprite2D" parent="Inside/Design/Floor"]
@@ -550,8 +550,8 @@ scale = Vector2(0.934716, 0.683368)
 texture = ExtResource("9_e5tye")
 
 [node name="Floor111" type="Sprite2D" parent="Inside/Design/Floor"]
-position = Vector2(7900.92, 1224.8)
-scale = Vector2(0.934716, 0.683368)
+position = Vector2(7916.88, 1224.8)
+scale = Vector2(0.998536, 0.683368)
 texture = ExtResource("9_e5tye")
 
 [node name="Floor112" type="Sprite2D" parent="Inside/Design/Floor"]
@@ -570,8 +570,8 @@ scale = Vector2(0.934716, 0.683368)
 texture = ExtResource("9_e5tye")
 
 [node name="Floor115" type="Sprite2D" parent="Inside/Design/Floor"]
-position = Vector2(7900.92, 925.288)
-scale = Vector2(0.934716, 0.683368)
+position = Vector2(7932.28, 925.288)
+scale = Vector2(1.06015, 0.683368)
 texture = ExtResource("9_e5tye")
 
 [node name="Floor116" type="Sprite2D" parent="Inside/Design/Floor"]
@@ -1055,8 +1055,6 @@ rotation = 1.5708
 scale = Vector2(0.79384, 0.79384)
 texture = ExtResource("10_mhyg4")
 
-[node name="Doors" type="Node2D" parent="Inside"]
-
 [node name="Desks & Meeting" type="Node2D" parent="Inside"]
 
 [node name="ImportantMeetingTable" parent="Inside/Desks & Meeting" instance=ExtResource("11_ylny0")]
@@ -1317,6 +1315,11 @@ position = Vector2(7233.94, 2719.09)
 rotation = 1.5708
 scale = Vector2(0.63173, 1)
 
+[node name="Sprite2D43" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
+position = Vector2(7239.88, 3221.63)
+rotation = 1.5708
+scale = Vector2(0.0548169, 0.964434)
+
 [node name="Sprite2D16" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
 position = Vector2(7243.11, 3972.75)
 rotation = 1.5708
@@ -1363,8 +1366,9 @@ rotation = 1.5708
 scale = Vector2(0.962908, 1)
 
 [node name="Sprite2D3" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
-position = Vector2(911.052, 671.109)
+position = Vector2(911.052, 685.397)
 rotation = 1.5708
+scale = Vector2(0.959176, 1)
 
 [node name="Sprite2D4" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
 position = Vector2(910.633, 52.2665)
@@ -1381,9 +1385,9 @@ position = Vector2(480.623, 1652.25)
 scale = Vector2(1.34744, 1)
 
 [node name="Sprite2D5" parent="Inside/Interior Walls & Windows" instance=ExtResource("17_bnyvs")]
-position = Vector2(909.335, 1980.41)
+position = Vector2(909.335, 1940)
 rotation = 1.5708
-scale = Vector2(0.825984, 1)
+scale = Vector2(0.710529, 1)
 
 [node name="WallBlue" parent="Inside/Interior Walls & Windows" instance=ExtResource("18_7v075")]
 position = Vector2(2542.8, 8.8866)
@@ -1507,8 +1511,10 @@ position = Vector2(8841.24, 1245.47)
 position = Vector2(8838.2, 724.651)
 
 [node name="SittingCurveOut" parent="Inside/Plants & Greenery" instance=ExtResource("22_imeep")]
+position = Vector2(7476.23, 1464.71)
 
 [node name="TennisTable" parent="Inside/Plants & Greenery" instance=ExtResource("23_l1odi")]
+position = Vector2(8051.23, 2080.71)
 
 [node name="TennisTable2" parent="Inside/Plants & Greenery" instance=ExtResource("23_l1odi")]
 position = Vector2(8014.83, 616.436)
@@ -1577,41 +1583,59 @@ position = Vector2(8854.45, 2366.75)
 rotation = 3.14159
 texture = ExtResource("19_62glk")
 
+[node name="Doors2" type="Node2D" parent="Inside"]
+
 [node name="PlayerSpawn" parent="." instance=ExtResource("25_lgtp3")]
 position = Vector2(-315.318, 1363.76)
 
-[node name="Door" parent="." instance=ExtResource("25_gubgn")]
-position = Vector2(19.1828, 1225.46)
-rotation = 1.5708
+[node name="NPCs" type="Node2D" parent="."]
 
-[node name="NPC" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(-1172.77, 878.678)
 rotation = 1.5708
 
-[node name="NPC2" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC2" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(1327.24, 299.687)
 rotation = 1.5708
 
-[node name="NPC3" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC3" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(3243.23, 1473.69)
 rotation = 1.5708
 
-[node name="NPC5" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC5" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(6413.23, 2460.71)
 rotation = 1.5708
 
-[node name="NPC6" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC6" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(5926.22, 5397.7)
 rotation = 1.5708
 
-[node name="NPC7" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC7" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(8133.23, 1506.71)
 rotation = 1.5708
 
-[node name="NPC8" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC8" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(6787.21, 6480.71)
 rotation = 1.5708
 
-[node name="NPC4" parent="." instance=ExtResource("26_50mvd")]
+[node name="NPC4" parent="NPCs" instance=ExtResource("26_50mvd")]
 position = Vector2(2421.24, -86.3091)
+rotation = 1.5708
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Door" parent="Interactables" instance=ExtResource("25_gubgn")]
+position = Vector2(19.1828, 1225.46)
+rotation = 1.5708
+
+[node name="Door2" parent="Interactables" instance=ExtResource("25_gubgn")]
+position = Vector2(912.237, 81.6858)
+rotation = 1.5708
+
+[node name="Door4" parent="Interactables" instance=ExtResource("25_gubgn")]
+position = Vector2(7231.12, 2935.51)
+rotation = 1.5708
+
+[node name="Door3" parent="Interactables" instance=ExtResource("25_gubgn")]
+position = Vector2(908.229, 2191.69)
 rotation = 1.5708
