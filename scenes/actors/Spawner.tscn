@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://l4q5613k0jbr"]
+
+[ext_resource type="Script" path="res://scripts/bodyActors/Spawner.gd" id="1_g8llk"]
+[ext_resource type="Texture2D" uid="uid://bd5hq20f0p2yg" path="res://graphics/placeholder/arrow.svg" id="2_lcry7"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_g8llk")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("2_lcry7")
