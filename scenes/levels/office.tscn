@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://djg32yldgdypy"]
+[gd_scene load_steps=28 format=3 uid="uid://djg32yldgdypy"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://be8g2soaxpir0" path="res://scenes/clickables/door.tscn" id="25_gubgn"]
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="25_lgtp3"]
 [ext_resource type="PackedScene" uid="uid://b7pr1db134ox8" path="res://scenes/actors/npc/npc.tscn" id="26_50mvd"]
+[ext_resource type="PackedScene" uid="uid://l4q5613k0jbr" path="res://scenes/actors/Spawner.tscn" id="27_dk0iy"]
 
 [node name="Office" type="Node2D"]
 position = Vector2(-10.6824, -0.763031)
@@ -1615,3 +1616,9 @@ rotation = 1.5708
 [node name="NPC4" parent="." instance=ExtResource("26_50mvd")]
 position = Vector2(2421.24, -86.3091)
 rotation = 1.5708
+
+[node name="Spawner" parent="." instance=ExtResource("27_dk0iy")]
+position = Vector2(-1603.77, 687.677)
+actor_to_spawn = ExtResource("26_50mvd")
+spawn_hours = 9
+spawn_minutes = 35
