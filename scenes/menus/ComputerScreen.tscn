@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4efcvjpq4f4p"]
+
+[ext_resource type="Script" path="res://scripts/menus/Computer.gd" id="1_pa8gy"]
+[ext_resource type="Texture2D" uid="uid://djqjji4eydoxg" path="res://graphics/Linux home.png" id="2_gef0l"]
+[ext_resource type="Texture2D" uid="uid://dlhps4h0rymc6" path="res://graphics/Linux login.png" id="3_jrt1c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
+bg_color = Color(0.376471, 0.631373, 0.803922, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx7i6"]
+bg_color = Color(0.215686, 0.360784, 0.686275, 1)
+
+[node name="ComputerScreen" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
+process_mode = 3
+script = ExtResource("1_pa8gy")
+resume = NodePath("MarginContainer/VBoxContainer/Login Buttons/LeftContainer/Login")
+quit = NodePath("MarginContainer/VBoxContainer/Login Buttons/RightContainer/ShutDown")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.262745, 0.396078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(961.5, 540.5)
+scale = Vector2(0.997396, 1.00093)
+texture = ExtResource("2_gef0l")
+
+[node name="Login" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(960, 538.5)
+scale = Vector2(0.996875, 0.999074)
+texture = ExtResource("3_jrt1c")
+
+[node name="Login Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Login Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 760
+theme_override_constants/margin_top = 560
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 720
+
+[node name="Login" type="Button" parent="MarginContainer/VBoxContainer/Login Buttons/LeftContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Login
+"
+
+[node name="RightContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Login Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 560
+theme_override_constants/margin_right = 760
+theme_override_constants/margin_bottom = 720
+
+[node name="ShutDown" type="Button" parent="MarginContainer/VBoxContainer/Login Buttons/RightContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Quit
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Top" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 720
+
+[node name="Logout" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/Top"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Logout
+"
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/VBoxContainer/Top/Logout" to="." method="_on_quit_button_down"]

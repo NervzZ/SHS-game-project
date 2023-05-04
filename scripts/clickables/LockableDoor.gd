@@ -5,6 +5,9 @@ extends "res://scripts/clickables/Door.gd"
 @export var keyName : String
 @onready var locked : bool = isClosed
 
+
+
+
 func clickedEvent():
 	if (isClosed):
 		attemptUnlock()
@@ -33,6 +36,8 @@ func attemptUnlock():
 		
 func unlock():
 	locked = false
+	var new_window = load("res://scenes/menus/Pause_menu.tscn").instance()
+	get_tree().get_root().add_child(new_window)
 	
 func lock():
 	locked = true
