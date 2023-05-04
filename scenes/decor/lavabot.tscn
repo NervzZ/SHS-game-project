@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg544phs0qxlh"]
+
+[ext_resource type="Texture2D" uid="uid://pjn46fee08kh" path="res://graphics/Interior Design/Bedroom/Lavabot.png" id="1_y22xo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgsg8"]
+size = Vector2(357.127, 281.19)
+
+[node name="Lavabot" type="Sprite2D"]
+position = Vector2(719.715, 1305.32)
+rotation = 3.14159
+scale = Vector2(0.636918, 0.636918)
+texture = ExtResource("1_y22xo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2.42462, -1.28186)
+shape = SubResource("RectangleShape2D_wgsg8")

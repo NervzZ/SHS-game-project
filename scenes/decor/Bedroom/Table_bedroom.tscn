@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://0uo6fysveao4"]
+
+[ext_resource type="Texture2D" uid="uid://d1bhfruy0df3h" path="res://graphics/Interior Design/Bedroom/Table Bedroom.png" id="1_qgcu4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_amyiy"]
+radius = 127.293
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvuk4"]
+size = Vector2(123.904, 124.912)
+
+[node name="TableBedroom" type="Sprite2D"]
+position = Vector2(741.939, 1920.09)
+texture = ExtResource("1_qgcu4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_amyiy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(144.071, -155.141)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_gvuk4")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-144.37, 158.332)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_gvuk4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-147.415, -154.906)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_gvuk4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(145.577, 153.447)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_gvuk4")
