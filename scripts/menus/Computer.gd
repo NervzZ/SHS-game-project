@@ -11,11 +11,6 @@ var homeButtons : VBoxContainer
 func _ready():
 	resume.button_down.connect(_on_continue_button_pressed)
 	quit.button_down.connect(_on_quit_button_pressed)
-	var menuSize = container.get_size()
-	var viewportSize = get_viewport_rect().size
-	var offsetx = viewportSize.x / 2
-	var offsety = viewportSize.y /2
-	position = Vector2(offsetx-600,offsety)
 	login = $MarginContainer/VBoxContainer/Login
 	loginButtons = $"MarginContainer/VBoxContainer/Login Buttons"
 	homeButtons = $MarginContainer/VBoxContainer/VBoxContainer
@@ -30,6 +25,7 @@ func openMenu():
 	
 func _on_continue_button_pressed():
 	login.hide()
+	$MarginContainer/VBoxContainer/Sprite2D.show()
 	loginButtons.hide()
 	homeButtons.show()
 	get_tree().paused = true
@@ -50,3 +46,8 @@ func _on_quit_button_down():
 	loginButtons.show()
 	homeButtons.hide()
 
+
+
+func _on_leave_button_down():
+	get_tree().paused = false
+	hide() # Replace with function body.

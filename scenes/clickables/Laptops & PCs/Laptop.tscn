@@ -1,20 +1,23 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://ww8t7joj4iyb"]
 
-[ext_resource type="Script" path="res://scripts/clickables/Laptop.gd" id="1_2nb0a"]
-[ext_resource type="Texture2D" uid="uid://1ag5dvu756sy" path="res://graphics/Interior Design/door.png" id="4_ott8w"]
+[ext_resource type="Script" path="res://scripts/clickables/Laptop.gd" id="1_lnag5"]
+[ext_resource type="Texture2D" uid="uid://b70vi5stqe055" path="res://graphics/Interior Design/Laptop.png" id="2_me8k8"]
+[ext_resource type="PackedScene" uid="uid://dpjrvi6r0bjnw" path="res://scenes/menus/ComputerScreen.tscn" id="3_30glk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
-size = Vector2(266, 18)
+size = Vector2(123, 115)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nus4t"]
-size = Vector2(266.5, 33)
+size = Vector2(121, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opfti"]
-size = Vector2(362, 174)
+size = Vector2(120, 212)
 
-[node name="Door" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
+[node name="Laptop" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
+process_priority = 1
+position = Vector2(-134, -1)
 sync_to_physics = false
-script = ExtResource("1_2nb0a")
+script = ExtResource("1_lnag5")
 clickableArea = NodePath("ClickArea")
 interactArea = NodePath("InteractArea")
 mainSprite = NodePath("Main Sprite")
@@ -23,20 +26,24 @@ mainSprite = NodePath("Main Sprite")
 position = Vector2(135, 2)
 rotation = -3.14159
 scale = Vector2(0.347077, 0.347077)
-texture = ExtResource("4_ott8w")
+texture = ExtResource("2_me8k8")
 
 [node name="Obstacle" type="CollisionShape2D" parent="."]
-position = Vector2(134, 0)
+position = Vector2(136.5, 0.5)
 shape = SubResource("RectangleShape2D_vcm44")
 
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(133.75, 0.5)
+position = Vector2(134.5, 1)
 shape = SubResource("RectangleShape2D_nus4t")
 
 [node name="InteractArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2(134, 0)
+position = Vector2(136, -80)
 shape = SubResource("RectangleShape2D_opfti")
+
+[node name="ComputerScreen" parent="." instance=ExtResource("3_30glk")]
+visible = false
+position = Vector2(701, -952)

@@ -8,7 +8,9 @@ extends "res://scripts/clickables/Door.gd"
 
 
 
+
 func clickedEvent():
+	isClosed = true
 	if (isClosed):
 		attemptUnlock()
 		if !locked:

@@ -1,42 +1,39 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5myudfhh3qkr"]
 
 [ext_resource type="Script" path="res://scripts/clickables/LockableDoor.gd" id="1_tgb8v"]
-[ext_resource type="Texture2D" uid="uid://b70vi5stqe055" path="res://graphics/Interior Design/Laptop.png" id="2_or02c"]
+[ext_resource type="Texture2D" uid="uid://1ag5dvu756sy" path="res://graphics/Interior Design/door.png" id="2_gqrvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
-size = Vector2(134, 119)
+size = Vector2(266, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nus4t"]
-size = Vector2(126, 115)
+size = Vector2(266.5, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opfti"]
-size = Vector2(133.5, 333)
+size = Vector2(362, 174)
 
-[node name="LockableDoor" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
+[node name="LockableDoor" type="AnimatableBody2D"]
 sync_to_physics = false
 script = ExtResource("1_tgb8v")
-clickableArea = NodePath("ClickArea")
-interactArea = NodePath("InteractArea")
-mainSprite = NodePath("Main Sprite")
 
 [node name="Main Sprite" type="Sprite2D" parent="."]
 position = Vector2(135, 2)
 rotation = -3.14159
 scale = Vector2(0.347077, 0.347077)
-texture = ExtResource("2_or02c")
+texture = ExtResource("2_gqrvv")
 
 [node name="Obstacle" type="CollisionShape2D" parent="."]
-position = Vector2(141, 1.5)
+position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_vcm44")
 
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(140, 0.5)
+position = Vector2(133.75, 0.5)
 shape = SubResource("RectangleShape2D_nus4t")
 
 [node name="InteractArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2(139.75, -11.5)
+position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_opfti")

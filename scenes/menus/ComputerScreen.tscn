@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4efcvjpq4f4p"]
+[gd_scene load_steps=6 format=3 uid="uid://dpjrvi6r0bjnw"]
 
 [ext_resource type="Script" path="res://scripts/menus/Computer.gd" id="1_pa8gy"]
-[ext_resource type="Texture2D" uid="uid://djqjji4eydoxg" path="res://graphics/Linux home.png" id="2_gef0l"]
-[ext_resource type="Texture2D" uid="uid://dlhps4h0rymc6" path="res://graphics/Linux login.png" id="3_jrt1c"]
+[ext_resource type="Texture2D" uid="uid://djqjji4eydoxg" path="res://graphics/Computers & Screens/Linux home.png" id="2_vow0d"]
+[ext_resource type="Texture2D" uid="uid://dlhps4h0rymc6" path="res://graphics/Computers & Screens/Linux login.png" id="3_6bp67"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
 bg_color = Color(0.376471, 0.631373, 0.803922, 1)
@@ -16,6 +16,9 @@ bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 
 [node name="ComputerScreen" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
 process_mode = 3
+process_priority = 1
+position = Vector2(2077, -415)
+rotation = 1.5708
 script = ExtResource("1_pa8gy")
 resume = NodePath("MarginContainer/VBoxContainer/Login Buttons/LeftContainer/Login")
 quit = NodePath("MarginContainer/VBoxContainer/Login Buttons/RightContainer/ShutDown")
@@ -39,14 +42,15 @@ size_flags_vertical = 3
 layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+visible = false
 position = Vector2(961.5, 540.5)
 scale = Vector2(0.997396, 1.00093)
-texture = ExtResource("2_gef0l")
+texture = ExtResource("2_vow0d")
 
 [node name="Login" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
 position = Vector2(960, 538.5)
 scale = Vector2(0.996875, 0.999074)
-texture = ExtResource("3_jrt1c")
+texture = ExtResource("3_6bp67")
 
 [node name="Login Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -90,16 +94,18 @@ text = "Quit
 "
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="Top" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 1200
-theme_override_constants/margin_top = 100
+theme_override_constants/margin_left = 1450
+theme_override_constants/margin_top = 98
 theme_override_constants/margin_right = 250
-theme_override_constants/margin_bottom = 720
+theme_override_constants/margin_bottom = 760
 
 [node name="Logout" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/Top"]
 layout_mode = 2
@@ -107,7 +113,24 @@ size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
-text = "Logout
-"
+text = "⚿ Logout"
+
+[node name="Bottom" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1455
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 780
+
+[node name="Leave" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/Bottom"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Leave Desk"
 
 [connection signal="button_down" from="MarginContainer/VBoxContainer/VBoxContainer/Top/Logout" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/VBoxContainer/Bottom/Leave" to="." method="_on_leave_button_down"]

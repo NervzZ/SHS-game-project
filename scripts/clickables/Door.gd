@@ -1,34 +1,39 @@
 extends "res://scripts/clickables/Clickable.gd"
 
-@export var isOn : bool = true
+@export var isClosed : bool = true
+@export var openDegrees : float = 115
+@export var openSpeed : float = 0.7
+@onready var closedRotation = rotation
+@onready var openRotation = closedRotation + deg_to_rad(openDegrees)
 var tween : Tween
 
 @onready var obstacle : CollisionShape2D = get_node("Obstacle")
 
-
-		
+func init():
+	if (!isClosed):
+		rotation = openRotation
+		obstacle.disabled = true
 	
 func clickedEvent():
 	if tween != null:
 		tween.kill()
 	tween = create_tween()
-	get_tree().paused = true
-	if (isOn):
-		turnOn()
-	else:
-		turnOff()
+	tween.finished.connect(_on_finished)
 	
+	if (isClosed):
+		open()
+	else:
+		close()
+	
+func _on_finished():
+	if isClosed:
+		obstacle.disabled = false
 
+func open():
+	tween.tween_property(self, "rotation", openRotation, openSpeed)
+	isClosed = false
+	obstacle.disabled = true
 
-func turnOn():
-	isOn = false
-	var new_window = load("res://scenes/menus/ComputerScreen.tscn").instantiate()
-	var visible_rect = get_viewport().get_visible_rect()
-	new_window.position = Vector2(3000,3000)
-	get_tree().get_root().add_child(new_window)
-
-
-func turnOff():
-	isOn = true
-	var new_window = load("res://scenes/menus/ComputerScreen.tscn").instantiate()
-	get_tree().get_root().add_child(new_window)
+func close():
+	tween.tween_property(self, "rotation", closedRotation, openSpeed)
+	isClosed = true

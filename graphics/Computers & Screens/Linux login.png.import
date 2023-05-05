@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlhps4h0rymc6"
-path="res://.godot/imported/Linux login.png-d7414cbe7675d45ecde5375defd73da6.ctex"
+path="res://.godot/imported/Linux login.png-5b3a25bc4e7cef7362b36430d40a97a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Linux login.png"
-dest_files=["res://.godot/imported/Linux login.png-d7414cbe7675d45ecde5375defd73da6.ctex"]
+source_file="res://graphics/Computers & Screens/Linux login.png"
+dest_files=["res://.godot/imported/Linux login.png-5b3a25bc4e7cef7362b36430d40a97a2.ctex"]
 
 [params]
 
