@@ -1628,4 +1628,3 @@ keyName = "Cyber Shield Keycard"
 [node name="CyberShieldKeyCard" parent="." instance=ExtResource("28_v743i")]
 position = Vector2(-1118.77, 2082.68)
 rotation = -0.497419
-ThickerHighlight = true

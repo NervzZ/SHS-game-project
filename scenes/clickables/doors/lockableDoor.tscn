@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5myudfhh3qkr"]
+[gd_scene load_steps=10 format=3 uid="uid://c5myudfhh3qkr"]
 
 [ext_resource type="Script" path="res://scripts/clickables/LockableDoor.gd" id="1_tgb8v"]
 [ext_resource type="Texture2D" uid="uid://1ag5dvu756sy" path="res://graphics/Interior Design/door.png" id="2_gqrvv"]
+[ext_resource type="AudioStream" uid="uid://b0aabn84gybvu" path="res://sfx/Sources/sxf/Door/Door_locked.wav" id="3_tn8uf"]
+[ext_resource type="AudioStream" uid="uid://dss1vfde2w6lh" path="res://sfx/Sources/sxf/Door/Door_unlocked.wav" id="4_wba46"]
+[ext_resource type="AudioStream" uid="uid://ceym0m1arhhpc" path="res://sfx/Sources/sxf/Door/Door_open.wav" id="5_00uuy"]
+[ext_resource type="AudioStream" uid="uid://bx4g1f47qhx26" path="res://sfx/Sources/sxf/Door/Door_close.wav" id="6_p4au3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
 size = Vector2(266, 18)
@@ -40,3 +44,16 @@ shape = SubResource("RectangleShape2D_nus4t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_opfti")
+
+[node name="Door_locked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tn8uf")
+
+[node name="Door_unlocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wba46")
+
+[node name="Door_open" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_00uuy")
+
+[node name="Door_close" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_p4au3")
+pitch_scale = 0.75

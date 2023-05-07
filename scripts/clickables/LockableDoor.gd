@@ -4,6 +4,8 @@ extends "res://scripts/clickables/Door.gd"
 
 @export var keyName : String
 @onready var locked : bool = isClosed
+@onready var sfx_door_locked : AudioStreamPlayer2D = get_node("Door_locked")
+@onready var sfx_door_unlocked : AudioStreamPlayer2D = get_node("Door_unlocked")
 
 func clickedEvent():
 	if (isClosed):
@@ -28,8 +30,12 @@ func attemptUnlock():
 	if playerHasKey():
 		print("Unlocked!")
 		unlock()
+		if !sfx_door_unlocked.playing:
+			sfx_door_unlocked.play()
 	else:
 		print("It's locked")
+		if !sfx_door_locked.playing:
+			sfx_door_locked.play()
 		
 func unlock():
 	locked = false

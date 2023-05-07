@@ -8,6 +8,8 @@ extends "res://scripts/clickables/Clickable.gd"
 var tween : Tween
 
 @onready var obstacle : CollisionShape2D = get_node("Obstacle")
+@onready var sfx_door_open : AudioStreamPlayer2D = get_node("Door_open")
+@onready var sfx_door_close : AudioStreamPlayer2D = get_node("Door_close")
 
 func init():
 	if (!isClosed):
@@ -33,7 +35,9 @@ func open():
 	tween.tween_property(self, "rotation", openRotation, openSpeed)
 	isClosed = false
 	obstacle.disabled = true
+	sfx_door_open.play()
 
 func close():
 	tween.tween_property(self, "rotation", closedRotation, openSpeed)
 	isClosed = true
+	sfx_door_close.play()
