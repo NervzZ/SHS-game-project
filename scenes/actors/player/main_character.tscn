@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vi707bpmvnsk" path="res://graphics/Bob/BobDroite.png" id="4_enjvp"]
 [ext_resource type="Texture2D" uid="uid://dvmxw5spxbpf" path="res://graphics/Bob/BonInterGauche.png" id="5_a3eur"]
 [ext_resource type="Texture2D" uid="uid://c5gr45fdpfyhv" path="res://graphics/Bob/BonGauche.png" id="6_5anbv"]
-[ext_resource type="AudioStream" uid="uid://djfqi4q2pvavm" path="res://sfx/Sources/sxf/Footsteps.wav" id="7_o5vnc"]
+[ext_resource type="AudioStream" uid="uid://djfqi4q2pvavm" path="res://sfx/Sources/sxf/Footsteps/Footsteps.wav" id="7_m55tb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dhor7"]
 radius = 37.5
@@ -59,6 +59,6 @@ animation = &"Walking"
 offset = Vector2(0, 210)
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_o5vnc")
-volume_db = -5.0
+stream = ExtResource("7_m55tb")
+volume_db = 1.0
 pitch_scale = 2.5
