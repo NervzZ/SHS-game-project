@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=38 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -28,6 +28,25 @@
 [ext_resource type="PackedScene" uid="uid://c5myudfhh3qkr" path="res://scenes/clickables/doors/lockableDoor.tscn" id="27_c3i8h"]
 [ext_resource type="PackedScene" uid="uid://l4q5613k0jbr" path="res://scenes/actors/Spawner.tscn" id="27_dk0iy"]
 [ext_resource type="PackedScene" uid="uid://4hlfarhbqile" path="res://scenes/clickables/keys/CyberShieldKeyCard.tscn" id="28_v743i"]
+[ext_resource type="PackedScene" uid="uid://dfog4l7kv5m80" path="res://scenes/audio/BGM_switcher.tscn" id="29_c5c4i"]
+[ext_resource type="AudioStream" uid="uid://ncjwvd6q2i32" path="res://sfx/Sources/bgm/Ambiance/Office.wav" id="30_u4c7s"]
+[ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
+[ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
+size = Vector2(169, 232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bcbc"]
+size = Vector2(24.9999, 283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmgtf"]
+size = Vector2(103.938, 331.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r23nm"]
+size = Vector2(163.001, 1900.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
+size = Vector2(153.5, 1964)
 
 [node name="Office" type="Node2D"]
 position = Vector2(82, 567)
@@ -1628,3 +1647,39 @@ keyName = "Cyber Shield Keycard"
 [node name="CyberShieldKeyCard" parent="." instance=ExtResource("28_v743i")]
 position = Vector2(-1118.77, 2082.68)
 rotation = -0.497419
+
+[node name="BGM_Office_elevator" parent="." instance=ExtResource("29_c5c4i")]
+position = Vector2(-318.005, 1364)
+stream = ExtResource("31_rqgmi")
+pitch_scale = 1.2
+volume_db = -22.0
+
+[node name="Spawn" type="CollisionShape2D" parent="BGM_Office_elevator"]
+shape = SubResource("RectangleShape2D_tqugn")
+
+[node name="Door" type="CollisionShape2D" parent="BGM_Office_elevator"]
+position = Vector2(313, -4.9989)
+shape = SubResource("RectangleShape2D_8bcbc")
+
+[node name="BGM_Office" parent="." instance=ExtResource("29_c5c4i")]
+position = Vector2(104.995, 1355)
+stream = ExtResource("30_u4c7s")
+pitch_scale = 1.4
+volume_db = -18.0
+
+[node name="Door" type="CollisionShape2D" parent="BGM_Office"]
+shape = SubResource("RectangleShape2D_qmgtf")
+
+[node name="Balcony" type="CollisionShape2D" parent="BGM_Office"]
+position = Vector2(6993, 122.025)
+shape = SubResource("RectangleShape2D_r23nm")
+
+[node name="BGM_Office_outside" parent="." instance=ExtResource("29_c5c4i")]
+position = Vector2(7280.99, 1483.03)
+stream = ExtResource("32_ygwn2")
+pitch_scale = 1.2
+volume_db = -20.0
+
+[node name="Balcony" type="CollisionShape2D" parent="BGM_Office_outside"]
+position = Vector2(24, -1.99988)
+shape = SubResource("RectangleShape2D_y3kio")
