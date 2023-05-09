@@ -1,16 +1,13 @@
 extends "res://scripts/clickables/Clickable.gd"
 
-@export var isOn : bool = true
-var tween : Tween
-
+@onready var gm = get_node("/root/GameManager")
 @onready var obstacle : CollisionShape2D = get_node("Obstacle")
+var computerScreen : Node2D = preload("res://scenes/menus/ComputerScreen.tscn").instantiate()
 
-
-		
+func init():
+	computerScreen.hide()
+	gm.UI.add_child(computerScreen)
 	
 func clickedEvent():
-	if tween != null:
-		tween.kill()
-	tween = create_tween()
-	get_tree().paused = true
-	$ComputerScreen.show()
+	computerScreen.show()
+	gm.pause_game()

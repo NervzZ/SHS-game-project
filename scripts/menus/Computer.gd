@@ -9,6 +9,12 @@ var loginButtons : HBoxContainer
 var homeButtons : VBoxContainer
 
 func _ready():
+	var menuSize = container.get_size()
+	var viewportSize = get_viewport_rect().size
+	var offsetx = viewportSize.x / 2 - menuSize.x /2
+	var offsety = viewportSize.y /2 - menuSize.y /2
+	set_position(Vector2(offsetx, offsety))
+	
 	resume.button_down.connect(_on_continue_button_pressed)
 	quit.button_down.connect(_on_quit_button_pressed)
 	login = $MarginContainer/VBoxContainer/Login
@@ -19,7 +25,6 @@ func _ready():
 	
 func openMenu():
 	show()
-	
 	get_tree().paused = true
 	
 	

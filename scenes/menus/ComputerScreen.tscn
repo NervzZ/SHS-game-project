@@ -17,8 +17,6 @@ bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 [node name="ComputerScreen" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
 process_mode = 3
 process_priority = 1
-position = Vector2(2077, -415)
-rotation = 1.5708
 script = ExtResource("1_pa8gy")
 resume = NodePath("MarginContainer/VBoxContainer/Login Buttons/LeftContainer/Login")
 quit = NodePath("MarginContainer/VBoxContainer/Login Buttons/RightContainer/ShutDown")
