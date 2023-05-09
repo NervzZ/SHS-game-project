@@ -1490,8 +1490,8 @@ scale = Vector2(12.4835, 1)
 [node name="Plants & Greenery" type="Node2D" parent="Inside"]
 
 [node name="CornerGreenery" type="Sprite2D" parent="Inside/Plants & Greenery"]
-position = Vector2(1776.31, -222.795)
-scale = Vector2(1.04129, 1.04325)
+position = Vector2(1776.31, -231.779)
+scale = Vector2(0.55, 0.551)
 texture = ExtResource("19_62glk")
 
 [node name="Bench2" parent="Inside/Plants & Greenery" instance=ExtResource("20_qrqmm")]
@@ -1512,17 +1512,20 @@ rotation = 1.5708
 position = Vector2(7471.43, 294.342)
 
 [node name="CornerGreenery2" type="Sprite2D" parent="Inside/Plants & Greenery"]
-position = Vector2(2643.89, -226.87)
+position = Vector2(2661, -203.99)
 rotation = 1.5708
+scale = Vector2(0.55, 0.55)
 texture = ExtResource("19_62glk")
 
 [node name="CornerGreenery3" type="Sprite2D" parent="Inside/Plants & Greenery"]
-position = Vector2(8861.33, 162.871)
+position = Vector2(8857, 202.032)
 rotation = 1.5708
+scale = Vector2(0.55, 0.55)
 texture = ExtResource("19_62glk")
 
 [node name="CornerGreenery5" type="Sprite2D" parent="Inside/Plants & Greenery"]
-position = Vector2(7352.62, 158.134)
+position = Vector2(7372, 176.026)
+scale = Vector2(0.55, 0.55)
 texture = ExtResource("19_62glk")
 
 [node name="VerticalGreenery" parent="Inside/Plants & Greenery" instance=ExtResource("21_ybokh")]
@@ -1542,9 +1545,10 @@ position = Vector2(8838.2, 724.651)
 position = Vector2(8014.83, 616.436)
 
 [node name="SmallGreenery" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
+position = Vector2(4595.18, 7424.97)
 
 [node name="SmallGreenery2" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(5209.41, 6112.97)
+position = Vector2(5204.79, 6100.54)
 
 [node name="SmallGreenery3" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
 position = Vector2(4605.44, 5492.86)
@@ -1556,53 +1560,54 @@ position = Vector2(5269.35, 4646.85)
 position = Vector2(5983.96, 5096.37)
 
 [node name="SmallGreenery6" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(8874.72, 5287.7)
+position = Vector2(8874.72, 5293.46)
 
 [node name="SmallGreenery7" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(8176.23, 4443.99)
+position = Vector2(8176.23, 4456.47)
 
 [node name="SmallGreenery8" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
 position = Vector2(8167.01, 5942.38)
 
 [node name="SmallGreenery9" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(7344.05, 5485.95)
+position = Vector2(7354.46, 5485.95)
 
 [node name="SmallGreenery10" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(7346.35, 2565.23)
+position = Vector2(7354.31, 2586.15)
 
 [node name="SmallGreenery16" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(7347.58, 4239.41)
+position = Vector2(7354.86, 4231.74)
 
 [node name="SmallGreenery17" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(7331.44, 3802.32)
+position = Vector2(7355.4, 3802.32)
 
 [node name="SmallGreenery18" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
 position = Vector2(8898.53, 3803.56)
 
 [node name="SmallGreenery11" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(4674.6, 2791.14)
+position = Vector2(4599.6, 2791.14)
 
 [node name="SmallGreenery19" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(4166.01, 2387.62)
+position = Vector2(4166.01, 2427.94)
 
 [node name="SmallGreenery20" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(2038.54, 2368.51)
+position = Vector2(2038.54, 2436.67)
 
 [node name="SmallGreenery12" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(4660.77, 3860.77)
+position = Vector2(4597.23, 3860.77)
 
 [node name="SmallGreenery13" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(5905.59, 4386.36)
+position = Vector2(5905.59, 4391.16)
 
 [node name="SmallGreenery14" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(133.641, 2430.08)
+position = Vector2(99.6309, 2444.4)
 
 [node name="SmallGreenery15" parent="Inside/Plants & Greenery" instance=ExtResource("24_isf5y")]
-position = Vector2(78.8808, 891.453)
+position = Vector2(87.2144, 891.453)
 
 [node name="CornerGreenery4" type="Sprite2D" parent="Inside/Plants & Greenery"]
-position = Vector2(8854.45, 2366.75)
+position = Vector2(8830.99, 2364.03)
 rotation = 3.14159
+scale = Vector2(0.55, 0.55)
 texture = ExtResource("19_62glk")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("25_lgtp3")]
