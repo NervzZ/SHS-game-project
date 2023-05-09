@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://be8g2soaxpir0"]
 
-[ext_resource type="Script" path="res://scripts/clickables/Laptop.gd" id="1_2nb0a"]
+[ext_resource type="Script" path="res://scripts/clickables/Door.gd" id="1_2nb0a"]
+[ext_resource type="AudioStream" uid="uid://ceym0m1arhhpc" path="res://sfx/Sources/sxf/Door/Door_open.wav" id="3_rm5vn"]
+[ext_resource type="AudioStream" uid="uid://bx4g1f47qhx26" path="res://sfx/Sources/sxf/Door/Door_close.wav" id="4_mw0av"]
 [ext_resource type="Texture2D" uid="uid://1ag5dvu756sy" path="res://graphics/Interior Design/door.png" id="4_ott8w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
@@ -40,3 +42,10 @@ shape = SubResource("RectangleShape2D_nus4t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2(134, 0)
 shape = SubResource("RectangleShape2D_opfti")
+
+[node name="Door_open" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rm5vn")
+
+[node name="Door_close" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mw0av")
+pitch_scale = 0.75
