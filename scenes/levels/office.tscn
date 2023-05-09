@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://7s8qe67kcnip" path="res://scenes/decor/exterior/small_greenery.tscn" id="24_isf5y"]
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="25_lgtp3"]
 [ext_resource type="PackedScene" uid="uid://b7pr1db134ox8" path="res://scenes/actors/npc/npc.tscn" id="26_50mvd"]
+[ext_resource type="PackedScene" uid="uid://c5myudfhh3qkr" path="res://scenes/clickables/doors/lockableDoor.tscn" id="27_c3i8h"]
 [ext_resource type="PackedScene" uid="uid://l4q5613k0jbr" path="res://scenes/actors/Spawner.tscn" id="27_dk0iy"]
 [ext_resource type="PackedScene" uid="uid://4hlfarhbqile" path="res://scenes/clickables/keys/CyberShieldKeyCard.tscn" id="28_v743i"]
 [ext_resource type="PackedScene" uid="uid://dfog4l7kv5m80" path="res://scenes/audio/BGM_switcher.tscn" id="29_c5c4i"]
@@ -414,7 +415,6 @@ position = Vector2(4454.36, 2542.8)
 scale = Vector2(0.269, 0.233806)
 
 [node name="Inside" type="Node2D" parent="."]
-script = SubResource("GDScript_cgoco")
 
 [node name="Design" type="Node2D" parent="Inside"]
 
@@ -1639,8 +1639,10 @@ actor_to_spawn = ExtResource("26_50mvd")
 spawn_hours = 9
 spawn_minutes = 25
 
-[node name="Laptop" parent="." instance=ExtResource("29_oo7u7")]
-position = Vector2(2466, 1933.01)
+[node name="LockableDoor" parent="." instance=ExtResource("27_c3i8h")]
+position = Vector2(17.2325, 1225.68)
+rotation = 1.5708
+keyName = "Cyber Shield Keycard"
 
 [node name="CyberShieldKeyCard" parent="." instance=ExtResource("28_v743i")]
 position = Vector2(-1118.77, 2082.68)
