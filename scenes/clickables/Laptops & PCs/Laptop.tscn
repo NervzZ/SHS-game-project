@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://ww8t7joj4iyb"]
+
+[ext_resource type="Script" path="res://scripts/clickables/Laptop.gd" id="1_lnag5"]
+[ext_resource type="Texture2D" uid="uid://b70vi5stqe055" path="res://graphics/Interior Design/Laptop.png" id="2_me8k8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcm44"]
+size = Vector2(123, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nus4t"]
+size = Vector2(121, 116)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yh852"]
+radius = 158.808
+
+[node name="Laptop" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
+process_priority = 1
+sync_to_physics = false
+script = ExtResource("1_lnag5")
+clickableArea = NodePath("ClickArea")
+interactArea = NodePath("InteractArea")
+mainSprite = NodePath("Main Sprite")
+
+[node name="Main Sprite" type="Sprite2D" parent="."]
+rotation = -3.14159
+scale = Vector2(0.347077, 0.347077)
+texture = ExtResource("2_me8k8")
+
+[node name="Obstacle" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vcm44")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("RectangleShape2D_nus4t")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_yh852")

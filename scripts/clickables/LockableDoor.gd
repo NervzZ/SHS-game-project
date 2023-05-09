@@ -7,7 +7,12 @@ extends "res://scripts/clickables/Door.gd"
 @onready var sfx_door_locked : AudioStreamPlayer2D = get_node("Door_locked")
 @onready var sfx_door_unlocked : AudioStreamPlayer2D = get_node("Door_unlocked")
 
+
+
+
+
 func clickedEvent():
+	isClosed = true
 	if (isClosed):
 		attemptUnlock()
 		if !locked:
@@ -39,6 +44,8 @@ func attemptUnlock():
 		
 func unlock():
 	locked = false
+	var new_window = load("res://scenes/menus/Pause_menu.tscn").instance()
+	get_tree().get_root().add_child(new_window)
 	
 func lock():
 	locked = true
