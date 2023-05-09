@@ -1,6 +1,7 @@
 extends "res://scripts/clickables/Door.gd"
 
 @onready var gm = get_node("/root/GameManager")
+@onready var announcer = get_node("/root/Announcer")
 
 @export var keyName : String
 @onready var locked : bool = isClosed
@@ -34,6 +35,7 @@ func attemptUnlock():
 			sfx_door_unlocked.play()
 	else:
 		print("It's locked")
+		announcer.announce("Bob: Hmmmm... it's locked")
 		if !sfx_door_locked.playing:
 			sfx_door_locked.play()
 		
