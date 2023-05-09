@@ -126,8 +126,8 @@ scale = Vector2(31.1461, 158.05)
 texture = ExtResource("4_7wn0e")
 
 [node name="Black5" type="Sprite2D" parent="Outside Decore/Outside Life"]
-position = Vector2(-3221.32, 1379.41)
-scale = Vector2(14.6308, 113.544)
+position = Vector2(-3221.32, 1364.26)
+scale = Vector2(14.6308, 115.437)
 texture = ExtResource("4_7wn0e")
 
 [node name="Black3" type="Sprite2D" parent="Outside Decore/Outside Life"]
