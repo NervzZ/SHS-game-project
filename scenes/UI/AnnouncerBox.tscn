@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsn7rl8bbuuap"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_42xak"]
+
+[node name="AnnouncerBox" type="ColorRect"]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 3816.0
+offset_bottom = 2144.0
+color = Color(0, 0.00392157, 0.00392157, 0.376471)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac felis imperdiet, pretium velit sodales, tincidunt lorem. Mauris posuere turpis in mauris tincidunt dapibus. Etiam nec condimentum diam. Donec fermentum est massa, a convallis massa rhoncus sed. Vivamus sit amet lorem sit amet lorem mattis vulputate. Mauris congue elit in sem interdum, eu dignissim augue varius. Donec ornare et augue sed ultricies. Praesent nec lobortis diam."
+label_settings = SubResource("LabelSettings_42xak")

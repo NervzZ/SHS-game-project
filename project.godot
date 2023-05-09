@@ -20,6 +20,7 @@ config/icon="res://graphics/placeholder/icon.svg"
 GameManager="*res://scripts/Singletons/GameManager.gd"
 Levels="*res://scripts/Singletons/Levels.gd"
 GlobalAudioPlayer="*res://scripts/Singletons/GlobalAudioPlayer.gd"
+Announcer="*res://scripts/Singletons/Announcer.gd"
 
 [display]
 

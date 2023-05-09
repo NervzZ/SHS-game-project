@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=41 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://ncjwvd6q2i32" path="res://sfx/Sources/bgm/Ambiance/Office.wav" id="30_u4c7s"]
 [ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
 [ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
+[ext_resource type="PackedScene" uid="uid://ww8t7joj4iyb" path="res://scenes/clickables/Laptops & PCs/Laptop.tscn" id="33_vagbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
 size = Vector2(169, 232)
@@ -42,8 +43,14 @@ size = Vector2(24.9999, 283)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmgtf"]
 size = Vector2(103.938, 331.875)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8o84b"]
+size = Vector2(31.9971, 1604.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r23nm"]
 size = Vector2(366, 27.6251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdsok"]
+size = Vector2(60, 1614)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
 size = Vector2(334.374, 29.4999)
@@ -1671,8 +1678,8 @@ volume_db = -18.0
 shape = SubResource("RectangleShape2D_qmgtf")
 
 [node name="Balcony" type="CollisionShape2D" parent="BGM_Office"]
-position = Vector2(6993, 122.025)
-shape = SubResource("RectangleShape2D_r23nm")
+position = Vector2(7015, 120.776)
+shape = SubResource("RectangleShape2D_8o84b")
 
 [node name="Balcony2" type="CollisionShape2D" parent="BGM_Office"]
 position = Vector2(2080, -1264.99)
@@ -1685,9 +1692,12 @@ pitch_scale = 1.2
 volume_db = -20.0
 
 [node name="Balcony" type="CollisionShape2D" parent="BGM_Office_outside"]
-position = Vector2(24, -1.99988)
-shape = SubResource("RectangleShape2D_y3kio")
+position = Vector2(13.0044, -4.00366)
+shape = SubResource("RectangleShape2D_bdsok")
 
 [node name="Balcony2" type="CollisionShape2D" parent="BGM_Office_outside"]
 position = Vector2(-5087.99, -1561.02)
 shape = SubResource("RectangleShape2D_y3kio")
+
+[node name="Laptop" parent="." instance=ExtResource("33_vagbv")]
+position = Vector2(2605.99, 1933.01)
