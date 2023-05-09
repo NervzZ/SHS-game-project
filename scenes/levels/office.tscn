@@ -43,10 +43,10 @@ size = Vector2(24.9999, 283)
 size = Vector2(103.938, 331.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r23nm"]
-size = Vector2(163.001, 1900.5)
+size = Vector2(366, 27.6251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
-size = Vector2(153.5, 1964)
+size = Vector2(334.374, 29.4999)
 
 [node name="Office" type="Node2D"]
 position = Vector2(82, 567)
@@ -1674,6 +1674,10 @@ shape = SubResource("RectangleShape2D_qmgtf")
 position = Vector2(6993, 122.025)
 shape = SubResource("RectangleShape2D_r23nm")
 
+[node name="Balcony2" type="CollisionShape2D" parent="BGM_Office"]
+position = Vector2(2080, -1264.99)
+shape = SubResource("RectangleShape2D_r23nm")
+
 [node name="BGM_Office_outside" parent="." instance=ExtResource("29_c5c4i")]
 position = Vector2(7280.99, 1483.03)
 stream = ExtResource("32_ygwn2")
@@ -1682,4 +1686,8 @@ volume_db = -20.0
 
 [node name="Balcony" type="CollisionShape2D" parent="BGM_Office_outside"]
 position = Vector2(24, -1.99988)
+shape = SubResource("RectangleShape2D_y3kio")
+
+[node name="Balcony2" type="CollisionShape2D" parent="BGM_Office_outside"]
+position = Vector2(-5087.99, -1561.02)
 shape = SubResource("RectangleShape2D_y3kio")
