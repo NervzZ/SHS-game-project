@@ -16,9 +16,12 @@ size = Vector2(266.5, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opfti"]
 size = Vector2(362, 174)
 
-[node name="LockableDoor" type="AnimatableBody2D"]
+[node name="LockableDoor" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
 sync_to_physics = false
 script = ExtResource("1_tgb8v")
+clickableArea = NodePath("ClickArea")
+interactArea = NodePath("InteractArea")
+mainSprite = NodePath("Main Sprite")
 
 [node name="Main Sprite" type="Sprite2D" parent="."]
 position = Vector2(135, 2)
