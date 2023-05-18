@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=42 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Script" path="res://scripts/level/Office.gd" id="1_c2kqv"]
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
@@ -33,6 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
 [ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
 [ext_resource type="PackedScene" uid="uid://ww8t7joj4iyb" path="res://scenes/clickables/Laptops & PCs/Laptop.tscn" id="33_vagbv"]
+[ext_resource type="PackedScene" uid="uid://ba6bac0nwptqo" path="res://scenes/clickables/Laptops & PCs/LaptopWithEmail.tscn" id="34_6816s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
 size = Vector2(169, 232)
@@ -1699,3 +1700,6 @@ shape = SubResource("RectangleShape2D_y3kio")
 
 [node name="Laptop" parent="." instance=ExtResource("33_vagbv")]
 position = Vector2(2605.99, 1933.01)
+
+[node name="Laptop2" parent="." instance=ExtResource("34_6816s")]
+position = Vector2(2051, 1311.01)
