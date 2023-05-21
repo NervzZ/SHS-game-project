@@ -17,3 +17,4 @@ func _ready():
 func _on_continue_button_pressed():
 	gm.resume_game()
 	gm.goto_scene(levels.MAIN_LEVEL, 5, 30)
+	hide()
