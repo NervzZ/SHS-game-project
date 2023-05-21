@@ -1,8 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dye78wdelxc4o"]
+[gd_scene load_steps=5 format=3 uid="uid://dye78wdelxc4o"]
 
 [ext_resource type="Script" path="res://scripts/menus/Game_over.gd" id="1_skc4i"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_0lvs4"]
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka0wr"]
+bg_color = Color(0.376471, 0.631373, 0.803922, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4q3l"]
+bg_color = Color(0.215686, 0.360784, 0.686275, 1)
+
 [node name="Game_over" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_skc4i")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -10,38 +24,67 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.713726, 0.160784, 0, 1)
+color = Color(0, 0.262745, 0.396078, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="GameOverTitle" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 350
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/GameOverTitle"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GameOverTitle/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 170
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="GameOverMessage" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Recommencer" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/GameOverMessage"]
 layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 180
-text = "Recommencer"
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GameOverMessage/MarginContainer"]
 layout_mode = 2
+text = "Text"
+label_settings = SubResource("LabelSettings_0lvs4")
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Indice" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Controls" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 130
-text = "Indice"
+size_flags_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Controls"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 450
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 450
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/Controls/MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 170
+theme_override_styles/normal = SubResource("StyleBoxFlat_ka0wr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j4q3l")
+text = "Continue
+"

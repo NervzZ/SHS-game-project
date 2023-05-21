@@ -1,13 +1,19 @@
 extends Node2D
 
-@export var recommencer : Button
-@export var indice : Button
+@onready var gm = get_node("/root/GameManager")
+@onready var levels = get_node("/root/Levels")
+@onready var continueButton : Button = get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/Continue")
+@onready var container : MarginContainer = get_node("MarginContainer")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-func GameOver():
-	show()
-	get_tree().paused = true
+	continueButton.button_down.connect(_on_continue_button_pressed)
+	var menuSize = container.get_size()
+	var viewportSize = get_viewport_rect().size
+	var offsetx = viewportSize.x / 2 - menuSize.x /2
+	var offsety = viewportSize.y /2 - menuSize.y /2
+	set_position(Vector2(offsetx, offsety))
+	hide()
+	
+func _on_continue_button_pressed():
+	gm.resume_game()
+	gm.goto_scene(levels.MAIN_LEVEL, 5, 30)
