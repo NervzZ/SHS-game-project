@@ -43,6 +43,7 @@ func attemptUnlock():
 func unlock():
 	locked = false
 	GameState.locked_door_status = false
+	GameState.player_has_closed_main_door_status = true
 	
 func lock():
 	close()

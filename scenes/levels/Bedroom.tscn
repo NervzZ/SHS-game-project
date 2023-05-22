@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="15_28jg0"]
 [ext_resource type="PackedScene" path="res://scenes/levels/LevelChanger.tscn" id="16_dkndm"]
 [ext_resource type="PackedScene" uid="uid://dfog4l7kv5m80" path="res://scenes/audio/BGM_switcher.tscn" id="17_8o64o"]
-[ext_resource type="AudioStream" path="res://sfx/Sources/bgm/Ambiance/Room.wav" id="18_uvu2b"]
+[ext_resource type="AudioStream" uid="uid://dbxcy4mxvjcx2" path="res://sfx/Sources/bgm/Ambiance/Room.wav" id="18_uvu2b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d5rct"]
 size = Vector2(190, 197.5)

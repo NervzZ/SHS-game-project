@@ -3,7 +3,8 @@ extends Node2D
 
 var locked_door_status = true
 var player_has_closed_main_door_status = true
-var pc_status = false
+var pc_first_login = true
+var pc_login_status = true
 var loops_game_over = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -14,3 +15,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func resetGameState():
+	locked_door_status = true
+	player_has_closed_main_door_status = true
+	pc_first_login = true
+	pc_login_status = true
