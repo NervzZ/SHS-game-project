@@ -23,8 +23,7 @@ func _ready():
 	UI.add_child(pause_menu)
 	UI.add_child(game_over_menu)
 	UI.add_child(clock)
-	initPlayer()
-	goto_scene(levels.BEDROOM_LEVEL, 5, 30)
+	goto_scene(levels.Levels.BEDROOM_LEVEL, 5, 30)
 
 func initPlayer():
 	var camera = Camera2D.new()
@@ -63,7 +62,7 @@ func throwGameOver(gameOverMessage: String):
 	playerInventory = []
 	
 
-func goto_scene(level: Levels, hours : int, minutes : int):
+func goto_scene(level: int, hours : int, minutes : int):
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
 	# Deleting the current scene at this point is
