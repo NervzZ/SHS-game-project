@@ -1,7 +1,8 @@
 extends "res://scripts/clickables/Door.gd"
 
-@onready var gm = get_node("/root/GameManager")
 @onready var announcer = get_node("/root/Announcer")
+
+@onready var gm = get_node("/root/GameManager")
 
 @export var keyName : String
 @onready var locked : bool = isClosed

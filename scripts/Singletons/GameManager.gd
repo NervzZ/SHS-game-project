@@ -1,9 +1,10 @@
 extends Node2D
 
 @onready var levels = get_node("/root/Levels")
+var game_over_menu : Node2D = load("res://scenes/menus/Game_over.tscn").instantiate()
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
 var playerSpawn : Node2D
-var player : CharacterBody2D = load("res://scenes/actors/player/main_character.tscn").instantiate()
+var player : CharacterBody2D
 var clock : Node2D = load("res://scenes/UI/clock.tscn").instantiate()
 var UI : CanvasLayer = CanvasLayer.new()
 var current_scene = null
@@ -20,8 +21,8 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 	add_child(UI)
 	UI.add_child(pause_menu)
+	UI.add_child(game_over_menu)
 	UI.add_child(clock)
-	initPlayer()
 	goto_scene(levels.MAIN_LEVEL, 8, 32)
 	print(levels.MAIN_LEVEL)
 
@@ -42,6 +43,8 @@ func _input(event):
 		pause_menu.openMenu()
 
 func spawnPlayer():
+	player = load("res://scenes/actors/player/main_character.tscn").instantiate()
+	initPlayer()
 	current_scene.add_child(player)
 	player.set_position(playerSpawn.position)
 	player.set_rotation(playerSpawn.rotation)
@@ -51,6 +54,14 @@ func spawnPlayerIfExist():
 	if playerSpawn != null:
 		playerSpawn.hide()
 		spawnPlayer()
+
+func throwGameOver(gameOverMessage: String):
+	pause_game()
+	var text = game_over_menu.get_node("MarginContainer/VBoxContainer/GameOverMessage/MarginContainer/Label")
+	text.set_text(gameOverMessage)
+	game_over_menu.show()
+	playerInventory = []
+	
 
 func goto_scene(path: String, hours : int, minutes : int):
 	# This function will usually be called from a signal callback,
