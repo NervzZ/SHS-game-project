@@ -60,6 +60,7 @@ func throwGameOver(gameOverMessage: String):
 	var text = game_over_menu.get_node("MarginContainer/VBoxContainer/GameOverMessage/MarginContainer/Label")
 	text.set_text(gameOverMessage)
 	game_over_menu.show()
+	playerInventory = []
 	
 
 func goto_scene(path: String, hours : int, minutes : int):

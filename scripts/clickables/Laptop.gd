@@ -6,6 +6,11 @@ var computerScreen : Node2D = preload("res://scenes/menus/ComputerScreen.tscn").
 
 func init():
 	computerScreen.hide()
+	var instance = gm.UI.get_node("ComputerScreen")
+	
+	if (instance != null):
+		instance.free()
+
 	gm.UI.add_child(computerScreen)
 	
 func clickedEvent():
