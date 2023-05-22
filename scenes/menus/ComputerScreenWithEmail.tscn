@@ -1,0 +1,206 @@
+[gd_scene load_steps=13 format=3 uid="uid://8hu32yocvlt3"]
+
+[ext_resource type="Script" path="res://scripts/menus/ComputerWithEmail.gd" id="1_nutx5"]
+[ext_resource type="Texture2D" uid="uid://djqjji4eydoxg" path="res://graphics/Computers & Screens/Linux home.png" id="2_10h57"]
+[ext_resource type="Texture2D" uid="uid://jh7gkatltn2q" path="res://graphics/Computers & Screens/Linux with e-mail-2.png" id="3_f2jal"]
+[ext_resource type="Texture2D" uid="uid://dlhps4h0rymc6" path="res://graphics/Computers & Screens/Linux login.png" id="3_mjw41"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mvlw"]
+bg_color = Color(0.211765, 0.588235, 0.866667, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx7i6"]
+bg_color = Color(0.215686, 0.360784, 0.686275, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_po73t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5003w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h0ymk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmeb6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iihcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pdpd0"]
+
+[node name="ComputerScreenWithEmai" type="Node2D" node_paths=PackedStringArray("resume", "quit")]
+process_mode = 3
+process_priority = 1
+script = ExtResource("1_nutx5")
+resume = NodePath("MarginContainer/VBoxContainer/Login Buttons/LeftContainer/Login")
+quit = NodePath("MarginContainer/VBoxContainer/Login Buttons/RightContainer/Quit")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.262745, 0.396078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+visible = false
+position = Vector2(961.5, 540.5)
+scale = Vector2(0.997396, 1.00093)
+texture = ExtResource("2_10h57")
+
+[node name="Linux Email" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+visible = false
+position = Vector2(961.5, 540.5)
+scale = Vector2(0.997396, 1.00093)
+texture = ExtResource("3_f2jal")
+
+[node name="Login" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(960, 538.5)
+scale = Vector2(0.996875, 0.999074)
+texture = ExtResource("3_mjw41")
+
+[node name="Login Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Login Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 760
+theme_override_constants/margin_top = 560
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 720
+
+[node name="Login" type="Button" parent="MarginContainer/VBoxContainer/Login Buttons/LeftContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Login
+"
+
+[node name="RightContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Login Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 560
+theme_override_constants/margin_right = 760
+theme_override_constants/margin_bottom = 720
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/Login Buttons/RightContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Quit
+"
+
+[node name="Home Buttons" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Top" type="MarginContainer" parent="MarginContainer/VBoxContainer/Home Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1450
+theme_override_constants/margin_top = 98
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 760
+
+[node name="Logout" type="Button" parent="MarginContainer/VBoxContainer/Home Buttons/Top"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "⚿ Logout"
+
+[node name="Bottom" type="MarginContainer" parent="MarginContainer/VBoxContainer/Home Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1455
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 250
+theme_override_constants/margin_bottom = 780
+
+[node name="Leave" type="Button" parent="MarginContainer/VBoxContainer/Home Buttons/Bottom"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mvlw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
+text = "Leave Desk"
+
+[node name="Email Buttons" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Top" type="MarginContainer" parent="MarginContainer/VBoxContainer/Email Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 500
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 400
+theme_override_constants/margin_bottom = 590
+
+[node name="MIddle" type="MarginContainer" parent="MarginContainer/VBoxContainer/Email Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 780
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 780
+theme_override_constants/margin_bottom = 100
+
+[node name="Win" type="Button" parent="MarginContainer/VBoxContainer/Email Buttons/MIddle"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_po73t")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5003w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h0ymk")
+text = "    "
+
+[node name="Bottom2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Email Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 1200
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 100
+
+[node name="Delete" type="Button" parent="MarginContainer/VBoxContainer/Email Buttons/Bottom2"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmeb6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iihcd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pdpd0")
+text = "   "
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Login Buttons/LeftContainer/Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Login Buttons/RightContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Home Buttons/Top/Logout" to="." method="_on_logout_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Home Buttons/Bottom/Leave" to="." method="_on_leave_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Email Buttons/MIddle/Win" to="." method="_on_win_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Email Buttons/Bottom2/Delete" to="." method="_on_delete_pressed"]
