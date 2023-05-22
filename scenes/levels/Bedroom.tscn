@@ -131,9 +131,6 @@ texture = ExtResource("2_lovvp")
 
 [node name="Interior" type="Node2D" parent="."]
 
-[node name="Door" parent="Interior" instance=ExtResource("11_koq6c")]
-position = Vector2(1610.07, -608.747)
-
 [node name="Bed" parent="Interior" instance=ExtResource("4_0d45t")]
 position = Vector2(2816.07, 1696.25)
 
@@ -176,10 +173,6 @@ position = Vector2(1420.19, 2182.56)
 scale = Vector2(0.583776, 0.583776)
 texture = ExtResource("11_1wlkw")
 
-[node name="CyberShieldKeyCard" parent="Interior" instance=ExtResource("10_3lifg")]
-position = Vector2(1006.07, 1896.25)
-rotation = -0.942478
-
 [node name="Bathroom" type="Node2D" parent="Interior"]
 
 [node name="Toilet" parent="Interior/Bathroom" instance=ExtResource("6_rmwh4")]
@@ -188,10 +181,6 @@ rotation = 3.14159
 
 [node name="Lavabot" parent="Interior/Bathroom" instance=ExtResource("5_ft0j1")]
 position = Vector2(449.069, 658.253)
-rotation = -1.5708
-
-[node name="Door" parent="Interior/Bathroom" instance=ExtResource("11_koq6c")]
-position = Vector2(855.069, 1142.25)
 rotation = -1.5708
 
 [node name="Outer brick walls" type="Node2D" parent="."]
@@ -304,6 +293,17 @@ position = Vector2(1741.07, -780.747)
 scale = Vector2(2, 2)
 hours = 8
 minutes = 30
+
+[node name="CyberShieldKeyCard" parent="." instance=ExtResource("10_3lifg")]
+position = Vector2(1006.07, 1896.25)
+rotation = -0.942478
+
+[node name="Door" parent="." instance=ExtResource("11_koq6c")]
+position = Vector2(1610.07, -608.747)
+
+[node name="Door2" parent="." instance=ExtResource("11_koq6c")]
+position = Vector2(855.069, 1141.25)
+rotation = -1.5708
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("15_28jg0")]
 position = Vector2(2835.07, 1920.25)

@@ -46,10 +46,6 @@ func process_logic(delta):
 	
 func _process(delta):
 	process_logic(delta)
-	if mouseIsHovering and playerIsInRange:
-		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
-	else:
-		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 #override this to define your behavior when the clickable is clicked
 func clickedEvent():
@@ -58,15 +54,22 @@ func clickedEvent():
 func _on_mouse_enter():
 	mouseIsHovering = true
 	mainSprite.set_material(highlightShader)
+	if playerIsInRange:
+		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
 func _on_mouse_exit():
 	mouseIsHovering = false
 	mainSprite.set_material(null)
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	
 func _on_body_entered(body):
 	if (body.name == "Main Character"):
 		playerIsInRange = true
+		print("player is in range")
+		if mouseIsHovering:
+			Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 		
 func _on_body_exited(body):
 	if (body.name == "Main Character"):
 		playerIsInRange = false
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
