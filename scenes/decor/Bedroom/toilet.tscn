@@ -3,16 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://bc0ioaglsd8dn" path="res://graphics/Interior Design/Bedroom/Toilet.png" id="1_rp1o5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bnivb"]
-radius = 100.881
-height = 506.169
+radius = 107.0
+height = 354.0
 
 [node name="Toilet" type="Sprite2D"]
-position = Vector2(738.525, 529.864)
-rotation = 3.14159
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_rp1o5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.409485, 104.429)
+position = Vector2(0, 12)
 shape = SubResource("CapsuleShape2D_bnivb")

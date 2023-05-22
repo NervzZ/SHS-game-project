@@ -6,9 +6,7 @@
 size = Vector2(357.127, 281.19)
 
 [node name="Lavabot" type="Sprite2D"]
-position = Vector2(719.715, 1305.32)
-rotation = 3.14159
-scale = Vector2(0.636918, 0.636918)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_y22xo")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

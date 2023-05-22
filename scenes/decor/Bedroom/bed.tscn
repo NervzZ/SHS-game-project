@@ -6,14 +6,12 @@
 size = Vector2(353.016, 475.397)
 
 [node name="Bed" type="Sprite2D"]
-position = Vector2(2587.62, 1438.24)
 rotation = 1.5708
-scale = Vector2(1.49139, 2.05289)
+scale = Vector2(1, 1.098)
 texture = ExtResource("1_iowol")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-2.77997, -2.85742)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_e8htp")

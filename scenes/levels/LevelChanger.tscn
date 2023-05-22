@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwse1rkcudcuh"]
+
+[ext_resource type="Script" path="res://scripts/level/LevelChanger.gd" id="1_w3v0c"]
+[ext_resource type="Texture2D" uid="uid://dc20am8yk6nty" path="res://graphics/placeholder/icon.svg" id="2_7v2l2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b0x0w"]
+size = Vector2(173, 142)
+
+[node name="LevelChanger" type="Area2D"]
+script = ExtResource("1_w3v0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b0x0w")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.65625, 0.65625)
+texture = ExtResource("2_7v2l2")
