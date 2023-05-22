@@ -35,6 +35,7 @@ func _on_continue_button_pressed():
 	homeButtons.show()
 	get_tree().paused = true
 	logged = true
+	GameState.pc_login_status = false
 	
 	
 
