@@ -59,6 +59,8 @@ func throwGameOver(gameOverMessage: String):
 	text.set_text(gameOverMessage)
 	game_over_menu.show()
 	playerInventory = []
+	GameState.loops_game_over += 1
+	GameState.resetGameState()
 	
 
 func goto_scene(level: int, hours : int, minutes : int):

@@ -21,11 +21,17 @@ GameManager="*res://scripts/Singletons/GameManager.gd"
 Levels="*res://scripts/Singletons/Levels.gd"
 GlobalAudioPlayer="*res://scripts/Singletons/GlobalAudioPlayer.gd"
 Announcer="*res://scripts/Singletons/Announcer.gd"
+GameState="*res://scripts/Singletons/GameState.gd"
+GlobalSfxPlayer="*res://scripts/Singletons/GlobalSfxPlayer.gd"
 
 [display]
 
 window/size/viewport_width=3840
 window/size/viewport_height=2160
+
+[editor]
+
+movie_writer/movie_file="C:/Users/jmarq/Documents/GitHubProjects/Godot/SHS-game-project/video/Movie1.avi"
 
 [input]
 

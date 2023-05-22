@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://daaf73mo3bgwa"]
+[gd_scene load_steps=21 format=3 uid="uid://c0dae474cqlem"]
 
-[ext_resource type="PackedScene" uid="uid://v5r22w5iem2d" path="res://scenes/decor/Walls/BrickWall.tscn" id="1_83bq3"]
+[ext_resource type="PackedScene" path="res://scenes/decor/Walls/BrickWall.tscn" id="1_83bq3"]
+[ext_resource type="Script" path="res://scripts/level/Bedroom.gd" id="1_k8u2w"]
 [ext_resource type="Texture2D" uid="uid://cmw46mebccgjc" path="res://graphics/Outside world/Black.png" id="1_ngq3b"]
 [ext_resource type="Texture2D" uid="uid://b0t1amiojrw53" path="res://graphics/Interior Design/CustomFloor.png" id="2_lovvp"]
 [ext_resource type="Texture2D" uid="uid://diygnxnganwm" path="res://graphics/Outside world/Porcelaine .png" id="3_scseg"]
@@ -15,10 +16,16 @@
 [ext_resource type="PackedScene" uid="uid://be8g2soaxpir0" path="res://scenes/clickables/doors/door.tscn" id="11_koq6c"]
 [ext_resource type="PackedScene" uid="uid://dlyi1flg7tdr0" path="res://scenes/decor/office/WallWindow.tscn" id="12_qv30q"]
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="15_28jg0"]
-[ext_resource type="PackedScene" uid="uid://dwse1rkcudcuh" path="res://scenes/levels/LevelChanger.tscn" id="16_dkndm"]
+[ext_resource type="PackedScene" path="res://scenes/levels/LevelChanger.tscn" id="16_dkndm"]
+[ext_resource type="PackedScene" uid="uid://dfog4l7kv5m80" path="res://scenes/audio/BGM_switcher.tscn" id="17_8o64o"]
+[ext_resource type="AudioStream" uid="uid://dbxcy4mxvjcx2" path="res://sfx/Sources/bgm/Ambiance/Room.wav" id="18_uvu2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5rct"]
+size = Vector2(190, 197.5)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-153.069, -373.253)
+script = ExtResource("1_k8u2w")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -292,7 +299,6 @@ scale = Vector2(0.651891, 0.794458)
 position = Vector2(1741.07, -780.747)
 scale = Vector2(2, 2)
 hours = 8
-minutes = 30
 
 [node name="CyberShieldKeyCard" parent="." instance=ExtResource("10_3lifg")]
 position = Vector2(1006.07, 1896.25)
@@ -308,3 +314,13 @@ rotation = -1.5708
 [node name="PlayerSpawn" parent="." instance=ExtResource("15_28jg0")]
 position = Vector2(2835.07, 1920.25)
 rotation = -1.74846e-07
+
+[node name="BGM_switcher" parent="." instance=ExtResource("17_8o64o")]
+position = Vector2(2831.07, 1993.25)
+stream = ExtResource("18_uvu2b")
+pitch_scale = 1.2
+volume_db = -20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BGM_switcher"]
+position = Vector2(0, -18)
+shape = SubResource("RectangleShape2D_d5rct")

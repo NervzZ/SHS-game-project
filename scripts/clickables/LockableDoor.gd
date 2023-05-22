@@ -23,7 +23,7 @@ func clickedEvent():
 			tween.kill()
 		tween = create_tween()
 		tween.finished.connect(_on_finished)
-		close()
+		lock()
 		
 func playerHasKey() -> bool :
 	return gm.playerInventory.find(keyName) >= 0
@@ -42,6 +42,10 @@ func attemptUnlock():
 		
 func unlock():
 	locked = false
+	GameState.locked_door_status = false
+	GameState.player_has_closed_main_door_status = true
 	
 func lock():
+	close()
 	locked = true
+	GameState.player_has_closed_main_door_status = false
