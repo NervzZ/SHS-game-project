@@ -15,11 +15,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+	
 func resetStates():
+	resetGameState()
+	loops_game_over = 0
+
+func resetGameState():
 	GameManager.playerInventory = []
 	locked_door_status = true
 	player_has_closed_main_door_status = true
 	pc_first_login = true
 	pc_login_status = true
-	loops_game_over = 0
