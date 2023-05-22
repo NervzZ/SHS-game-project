@@ -1,12 +1,10 @@
 extends Area2D
 
-@onready var gm = get_node("/root/GameManager")
-@onready var levels = get_node("/root/Levels")
 @onready var sprite: Sprite2D = get_node("Icon")
 
 @export var hours = 0
 @export var minutes = 0
-@export var level: Levels
+@export var level: Levels.Levels
 
 func _ready():
 	sprite.hide()
@@ -14,4 +12,4 @@ func _ready():
 
 func _on_body_entered(body):
 	if (body.name == "Main Character"):
-		gm.goto_scene(level)
+		GameManager.goto_scene(level, hours, minutes)

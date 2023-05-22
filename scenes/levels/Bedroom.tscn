@@ -194,10 +194,6 @@ rotation = -1.5708
 position = Vector2(855.069, 1142.25)
 rotation = -1.5708
 
-[node name="PlayerSpawn" parent="Interior" instance=ExtResource("15_28jg0")]
-position = Vector2(2835.07, 1920.25)
-rotation = -1.74846e-07
-
 [node name="Outer brick walls" type="Node2D" parent="."]
 
 [node name="Brick_Wall" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
@@ -306,3 +302,9 @@ scale = Vector2(0.651891, 0.794458)
 [node name="LevelChanger" parent="." instance=ExtResource("16_dkndm")]
 position = Vector2(1741.07, -780.747)
 scale = Vector2(2, 2)
+hours = 8
+minutes = 30
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("15_28jg0")]
+position = Vector2(2835.07, 1920.25)
+rotation = -1.74846e-07

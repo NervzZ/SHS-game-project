@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var levels = get_node("/root/Levels")
 var game_over_menu : Node2D = load("res://scenes/menus/Game_over.tscn").instantiate()
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
 var playerSpawn : Node2D
@@ -23,7 +22,7 @@ func _ready():
 	UI.add_child(pause_menu)
 	UI.add_child(game_over_menu)
 	UI.add_child(clock)
-	goto_scene(levels.Levels.BEDROOM_LEVEL, 5, 30)
+	goto_scene(Levels.Levels.BEDROOM_LEVEL, 5, 30)
 
 func initPlayer():
 	var camera = Camera2D.new()
@@ -72,7 +71,7 @@ func goto_scene(level: int, hours : int, minutes : int):
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
 
-	call_deferred("_deferred_goto_scene", levels.levelPath[level])
+	call_deferred("_deferred_goto_scene", Levels.levelPath[level])
 	clock.set_time(hours, minutes)
 	
 func _deferred_goto_scene(path):
