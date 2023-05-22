@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=40 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmw46mebccgjc" path="res://graphics/Outside world/Black.png" id="4_7wn0e"]
 [ext_resource type="PackedScene" uid="uid://cn5ffqkqyisxq" path="res://scenes/decor/office/elevator.tscn" id="5_vmde4"]
 [ext_resource type="Texture2D" uid="uid://bug0n8ruhbaa1" path="res://graphics/Outside world/Elevator Sign.png" id="6_goxam"]
-[ext_resource type="PackedScene" path="res://scenes/decor/Walls/BrickWall.tscn" id="7_onqm4"]
+[ext_resource type="PackedScene" uid="uid://v5r22w5iem2d" path="res://scenes/decor/Walls/BrickWall.tscn" id="7_onqm4"]
 [ext_resource type="Texture2D" uid="uid://b0t1amiojrw53" path="res://graphics/Interior Design/CustomFloor.png" id="8_2w4ln"]
 [ext_resource type="Texture2D" uid="uid://clddrp2g2n6oa" path="res://graphics/Interior Design/Terrace Floor.png" id="9_e5tye"]
 [ext_resource type="Texture2D" uid="uid://erm1j76i31vm" path="res://graphics/Logos/Cybershield Logo.png" id="10_mhyg4"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://b7pr1db134ox8" path="res://scenes/actors/npc/npc.tscn" id="26_50mvd"]
 [ext_resource type="PackedScene" uid="uid://c5myudfhh3qkr" path="res://scenes/clickables/doors/lockableDoor.tscn" id="27_c3i8h"]
 [ext_resource type="PackedScene" uid="uid://l4q5613k0jbr" path="res://scenes/actors/Spawner.tscn" id="27_dk0iy"]
-[ext_resource type="PackedScene" uid="uid://4hlfarhbqile" path="res://scenes/clickables/keys/CyberShieldKeyCard.tscn" id="28_v743i"]
 [ext_resource type="PackedScene" uid="uid://dfog4l7kv5m80" path="res://scenes/audio/BGM_switcher.tscn" id="29_c5c4i"]
 [ext_resource type="AudioStream" uid="uid://ncjwvd6q2i32" path="res://sfx/Sources/bgm/Ambiance/Office.wav" id="30_u4c7s"]
 [ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
@@ -1650,10 +1649,6 @@ spawn_minutes = 25
 position = Vector2(17.2325, 1225.68)
 rotation = 1.5708
 keyName = "Cyber Shield Keycard"
-
-[node name="CyberShieldKeyCard" parent="." instance=ExtResource("28_v743i")]
-position = Vector2(-1118.77, 2082.68)
-rotation = -0.497419
 
 [node name="BGM_Office_elevator" parent="." instance=ExtResource("29_c5c4i")]
 position = Vector2(-318.005, 1364)

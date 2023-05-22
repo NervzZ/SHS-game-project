@@ -14,6 +14,7 @@ bg_color = Color(0.215686, 0.360784, 0.686275, 1)
 
 [node name="MainMenu" type="Node2D"]
 process_mode = 3
+position = Vector2(-4, -4)
 script = ExtResource("1_3n6lb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -83,6 +84,6 @@ text = "Exit
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_stat_game_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/LeftContainer/StatGame" to="." method="_on_stat_game_button_up"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer/RightContainer/Exit" to="." method="_on_button_button_up"]
