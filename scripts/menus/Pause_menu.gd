@@ -23,4 +23,5 @@ func _on_continue_button_pressed():
 
 
 func _on_quit_button_pressed():
-	get_tree().quit()
+	hide()
+	GameManager.goto_scene(Levels.Levels.MAIN_MENU, 5, 30)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shs-game-project"
-run/main_scene="res://scenes/levels/office.tscn"
+run/main_scene="res://scenes/menus/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://graphics/placeholder/icon.svg"
 

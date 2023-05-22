@@ -22,7 +22,7 @@ func _ready():
 	UI.add_child(pause_menu)
 	UI.add_child(game_over_menu)
 	UI.add_child(clock)
-	goto_scene(Levels.Levels.BEDROOM_LEVEL, 5, 30)
+	goto_scene(Levels.Levels.MAIN_MENU, 5, 30)
 
 func initPlayer():
 	var camera = Camera2D.new()
