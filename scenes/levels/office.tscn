@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmw46mebccgjc" path="res://graphics/Outside world/Black.png" id="4_7wn0e"]
 [ext_resource type="PackedScene" uid="uid://cn5ffqkqyisxq" path="res://scenes/decor/office/elevator.tscn" id="5_vmde4"]
 [ext_resource type="Texture2D" uid="uid://bug0n8ruhbaa1" path="res://graphics/Outside world/Elevator Sign.png" id="6_goxam"]
-[ext_resource type="PackedScene" path="res://scenes/decor/Walls/BrickWall.tscn" id="7_onqm4"]
+[ext_resource type="PackedScene" uid="uid://v5r22w5iem2d" path="res://scenes/decor/Walls/BrickWall.tscn" id="7_onqm4"]
 [ext_resource type="Texture2D" uid="uid://b0t1amiojrw53" path="res://graphics/Interior Design/CustomFloor.png" id="8_2w4ln"]
 [ext_resource type="Texture2D" uid="uid://clddrp2g2n6oa" path="res://graphics/Interior Design/Terrace Floor.png" id="9_e5tye"]
 [ext_resource type="Texture2D" uid="uid://erm1j76i31vm" path="res://graphics/Logos/Cybershield Logo.png" id="10_mhyg4"]
@@ -1608,7 +1608,7 @@ rotation = 3.14159
 texture = ExtResource("19_62glk")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("25_lgtp3")]
-position = Vector2(-315.318, 1363.76)
+position = Vector2(-1436.01, 2019.99)
 
 [node name="NPC" parent="." instance=ExtResource("26_50mvd")]
 position = Vector2(-1172.77, 878.678)
@@ -1660,6 +1660,7 @@ pitch_scale = 1.2
 volume_db = -22.0
 
 [node name="Spawn" type="CollisionShape2D" parent="BGM_Office_elevator"]
+position = Vector2(-1137, 656.995)
 shape = SubResource("RectangleShape2D_tqugn")
 
 [node name="Door" type="CollisionShape2D" parent="BGM_Office_elevator"]
@@ -1702,4 +1703,4 @@ shape = SubResource("RectangleShape2D_y3kio")
 position = Vector2(2605.99, 1933.01)
 
 [node name="Laptop2" parent="." instance=ExtResource("34_6816s")]
-position = Vector2(2051, 1311.01)
+position = Vector2(3207.99, 1951.01)
