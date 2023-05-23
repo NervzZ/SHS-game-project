@@ -64,7 +64,8 @@ func _on_leave_pressed():
 
 
 func _on_win_pressed():
-	pass # Game Over
+	hide()
+	GameManager.throwGameOver("Your computer has experienced a cybersecurity breach. It appears that you may have fallen victim to a malicious phishing link or a compromised USB device.")
 
 
 func _on_delete_pressed():
