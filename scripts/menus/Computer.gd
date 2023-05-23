@@ -41,18 +41,17 @@ func _on_continue_button_pressed():
 	
 
 func _on_quit_button_pressed():
-	get_tree().paused = false
+	GameManager.resume_game()
 	login.show()
 	hide()
 
 
 func _on_quit_button_down():
-	get_tree().paused = false
 	logged = false
 	login.show()
 	loginButtons.show()
 	homeButtons.hide()
-	GameState.pc_login_status = false
+	GameState.pc_login_status = logged
 
 
 
