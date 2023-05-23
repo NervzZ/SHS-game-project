@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmw46mebccgjc" path="res://graphics/Outside world/Black.png" id="4_7wn0e"]
 [ext_resource type="PackedScene" uid="uid://cn5ffqkqyisxq" path="res://scenes/decor/office/elevator.tscn" id="5_vmde4"]
 [ext_resource type="Texture2D" uid="uid://bug0n8ruhbaa1" path="res://graphics/Outside world/Elevator Sign.png" id="6_goxam"]
-[ext_resource type="PackedScene" path="res://scenes/decor/Walls/BrickWall.tscn" id="7_onqm4"]
+[ext_resource type="PackedScene" uid="uid://v5r22w5iem2d" path="res://scenes/decor/Walls/BrickWall.tscn" id="7_onqm4"]
 [ext_resource type="Texture2D" uid="uid://b0t1amiojrw53" path="res://graphics/Interior Design/CustomFloor.png" id="8_2w4ln"]
 [ext_resource type="Texture2D" uid="uid://clddrp2g2n6oa" path="res://graphics/Interior Design/Terrace Floor.png" id="9_e5tye"]
 [ext_resource type="Texture2D" uid="uid://erm1j76i31vm" path="res://graphics/Logos/Cybershield Logo.png" id="10_mhyg4"]
