@@ -3,6 +3,7 @@ extends Node2D
 var loading_screen: Node2D = load("res://scenes/menus/Loading.tscn").instantiate()
 var game_over_menu : Node2D = load("res://scenes/menus/Game_over.tscn").instantiate()
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
+var inventoryObjectiveMenu : Node2D = load("res://scenes/menus/InventoryObjectiveMenu.tscn").instantiate()
 var playerSpawn : Node2D
 var player : CharacterBody2D
 var clock : Node2D = load("res://scenes/UI/clock.tscn").instantiate()
@@ -24,12 +25,13 @@ func _ready():
 	UI.add_child(game_over_menu)
 	UI.add_child(clock)
 	UI.add_child(loading_screen)
+	UI.add_child(inventoryObjectiveMenu)
 	goto_scene(Levels.Levels.MAIN_MENU, 5, 30)
 
 func initPlayer():
 	var camera = Camera2D.new()
 	camera.set_position_smoothing_enabled(true)
-	camera.set_position_smoothing_speed(3)
+	camera.set_position_smoothing_speed(10)
 	player.add_child(camera)
 
 func resume_game():
