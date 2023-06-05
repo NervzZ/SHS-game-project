@@ -3,23 +3,38 @@ extends Node2D
 @onready var colorRect: ColorRect = get_node("ColorRect")
 @onready var container: MarginContainer = get_node("MarginContainer")
 @onready var inventoryContainer = get_node("MarginContainer/VBoxContainer/Inventory")
+@onready var objectiveContainer = get_node("MarginContainer/VBoxContainer/Objectives")
+
+var currentObjective: HBoxContainer
+var labelSettingsCurrent: LabelSettings
+var labelSettingsDone: LabelSettings
 
 func _ready():
 	hide()
-	flushInventory()
+	labelSettingsCurrent = LabelSettings.new()
+	labelSettingsDone = LabelSettings.new()
+	labelSettingsCurrent.set_font_size(35)
+	labelSettingsDone.set_font_size(35)
+	labelSettingsDone.set_font_color(Color(0.45, 0.45, 0.45, 1))
 	
 	var viewportSize = get_viewport_rect().size
 	colorRect.set_size(Vector2(viewportSize.x * 0.8, viewportSize.y * 0.8))
 	container.set_size(Vector2(viewportSize.x * 0.8, viewportSize.y * 0.8))
-	GameManager.UI.hide()
-	GameManager.pause_game()
 	set_position(Vector2(viewportSize.x * 0.1, viewportSize.y * 0.1))
+	
+	flushObjectives()
+	currentObjective = addObjective("Go to work", Globals.objectives["Go to work"])
+	
+	flushInventory()
+	
 
 func _input(event):
 	if event.is_action_pressed("Open Inventory"):
 		if visible:
 			close()
+			GameManager.currentObjectiveUi.show()
 		else:
+			GameManager.currentObjectiveUi.hide()
 			open()
 
 func open():
@@ -45,6 +60,11 @@ func close():
 func flushInventory():
 	while inventoryContainer.get_child_count() > 0:
 		var child = inventoryContainer.get_child(0)
+		child.free()
+		
+func flushObjectives():
+	while objectiveContainer.get_child_count() > 0:
+		var child = objectiveContainer.get_child(0)
 		child.free()
 
 func addItem(name, item):
@@ -73,3 +93,36 @@ func addItem(name, item):
 		descriptionLabel.set_text(item.description)
 		inventoryContainer.add_child(box)
 
+func nextObjective():
+	#grey out the old objective
+	var currName = currentObjective.get_child(0)
+	currName.set_label_settings(labelSettingsDone)
+	currentObjective.get_child(1).set_label_settings(labelSettingsDone)
+	
+	var nextObjective = Globals.objectives[currName.get_text()].nextObjective
+	GameManager.currentObjectiveUi.setObjective(nextObjective)
+	if (nextObjective != null):
+		currentObjective = addObjective(nextObjective, Globals.objectives[nextObjective])
+		GameManager.current_objective = currentObjective.get_child(0).text
+
+func addObjective(name, objective) -> HBoxContainer:
+	var nameLabel = Label.new()
+	var box: HBoxContainer = HBoxContainer.new()
+	box.add_theme_constant_override("separation", 25)
+	nameLabel.set_label_settings(labelSettingsCurrent)
+	nameLabel.set_vertical_alignment(VERTICAL_ALIGNMENT_TOP)
+	nameLabel.set_v_size_flags(Control.SIZE_SHRINK_BEGIN)
+	
+	var descriptionLabel = nameLabel.duplicate()
+	descriptionLabel.set_h_size_flags(Control.SIZE_EXPAND_FILL)
+	descriptionLabel.set_autowrap_mode(TextServer.AUTOWRAP_WORD)
+	
+	box.add_child(nameLabel)
+	box.add_child(descriptionLabel)
+	
+	nameLabel.set_text(name)
+	descriptionLabel.set_text("- " + objective.description)
+	
+	objectiveContainer.add_child(box)
+	
+	return box

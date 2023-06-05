@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=44 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Script" path="res://scripts/level/Office.gd" id="1_c2kqv"]
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
 [ext_resource type="PackedScene" uid="uid://ww8t7joj4iyb" path="res://scenes/clickables/Laptops & PCs/Laptop.tscn" id="33_vagbv"]
 [ext_resource type="PackedScene" uid="uid://ba6bac0nwptqo" path="res://scenes/clickables/Laptops & PCs/LaptopWithEmail.tscn" id="34_6816s"]
+[ext_resource type="PackedScene" uid="uid://df5s4fi3h8fbg" path="res://scenes/actors/ObjectiveClearer.tscn" id="35_3l50y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
 size = Vector2(169, 232)
@@ -55,6 +56,9 @@ size = Vector2(60, 1614)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
 size = Vector2(334.374, 29.4999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6nig"]
+size = Vector2(83.0002, 110)
 
 [node name="Office" type="Node2D"]
 position = Vector2(82, 567)
@@ -1704,3 +1708,11 @@ position = Vector2(2605.99, 1933.01)
 
 [node name="Laptop2" parent="." instance=ExtResource("34_6816s")]
 position = Vector2(3207.99, 1951.01)
+
+[node name="ObjectiveClearer" parent="." instance=ExtResource("35_3l50y")]
+position = Vector2(-1366.01, 1802)
+objective_to_clear = "Go to work"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveClearer"]
+position = Vector2(-72.0006, 216)
+shape = SubResource("RectangleShape2D_v6nig")
