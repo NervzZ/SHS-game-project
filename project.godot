@@ -23,6 +23,7 @@ GlobalAudioPlayer="*res://scripts/Singletons/GlobalAudioPlayer.gd"
 Announcer="*res://scripts/Singletons/Announcer.gd"
 GameState="*res://scripts/Singletons/GameState.gd"
 GlobalSfxPlayer="*res://scripts/Singletons/GlobalSfxPlayer.gd"
+Globals="*res://scripts/Singletons/Globals.gd"
 
 [display]
 

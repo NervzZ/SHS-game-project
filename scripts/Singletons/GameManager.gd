@@ -29,7 +29,7 @@ func _ready():
 func initPlayer():
 	var camera = Camera2D.new()
 	camera.set_position_smoothing_enabled(true)
-	camera.set_position_smoothing_speed(3)
+	camera.set_position_smoothing_speed(10)
 	player.add_child(camera)
 
 func resume_game():
