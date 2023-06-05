@@ -10,7 +10,7 @@ script = ExtResource("1_7ydg6")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 3532.0
 offset_bottom = 2002.0
-color = Color(0, 0, 0, 0.764706)
+color = Color(0, 0, 0, 0.847059)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 3529.0
@@ -33,20 +33,34 @@ text = "Objectives:"
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Placeholder objective" type="Label" parent="MarginContainer/VBoxContainer/Objectives"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Objectives"]
+layout_mode = 2
+
+[node name="Placeholder objective" type="Label" parent="MarginContainer/VBoxContainer/Objectives/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "First objective"
 
-[node name="Placeholder objective2" type="Label" parent="MarginContainer/VBoxContainer/Objectives"]
+[node name="Placeholder objective2" type="Label" parent="MarginContainer/VBoxContainer/Objectives/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Second objective"
+text = "Description of the objective"
 
-[node name="Placeholder objective3" type="Label" parent="MarginContainer/VBoxContainer/Objectives"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Objectives"]
+layout_mode = 2
+
+[node name="Placeholder objective" type="Label" parent="MarginContainer/VBoxContainer/Objectives/HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Third objective"
+text = "First objective"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Objectives"]
+layout_mode = 2
+
+[node name="Placeholder objective" type="Label" parent="MarginContainer/VBoxContainer/Objectives/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "First objective"
 
 [node name="Spacer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
