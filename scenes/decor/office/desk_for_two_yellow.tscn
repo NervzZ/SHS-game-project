@@ -3,26 +3,25 @@
 [ext_resource type="Texture2D" uid="uid://bqsaj3lb2flnt" path="res://graphics/Interior Design/Desk for two.png" id="1_ctl1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5r7q"]
-size = Vector2(407.481, 141.912)
+size = Vector2(684, 284)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy5ho"]
-size = Vector2(137.435, 108.845)
+size = Vector2(288.179, 223.211)
 
 [node name="DeskForTwo" type="Sprite2D"]
-position = Vector2(284.356, 1777.8)
-scale = Vector2(0.965409, 0.965409)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_ctl1i")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.32486, -47.8234)
+position = Vector2(7.62939e-06, -80)
 shape = SubResource("RectangleShape2D_w5r7q")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(75.4536, 66.1888)
+position = Vector2(162.09, 164)
 shape = SubResource("RectangleShape2D_cy5ho")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-122.259, 27.9552)
+position = Vector2(-168, 166)
 shape = SubResource("RectangleShape2D_cy5ho")
