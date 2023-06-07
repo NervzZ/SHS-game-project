@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=40 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Script" path="res://scripts/level/Office.gd" id="1_c2kqv"]
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
@@ -32,8 +32,6 @@
 [ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
 [ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
 [ext_resource type="PackedScene" uid="uid://ww8t7joj4iyb" path="res://scenes/clickables/Laptops & PCs/Laptop.tscn" id="33_vagbv"]
-[ext_resource type="PackedScene" uid="uid://ba6bac0nwptqo" path="res://scenes/clickables/Laptops & PCs/LaptopWithEmail.tscn" id="34_6816s"]
-[ext_resource type="PackedScene" uid="uid://df5s4fi3h8fbg" path="res://scenes/actors/ObjectiveClearer.tscn" id="35_3l50y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
 size = Vector2(169, 232)
@@ -55,9 +53,6 @@ size = Vector2(60, 1614)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
 size = Vector2(334.374, 29.4999)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6nig"]
-size = Vector2(83.0002, 110)
 
 [node name="Office" type="Node2D"]
 position = Vector2(82, 567)
@@ -1656,12 +1651,12 @@ shape = SubResource("RectangleShape2D_bdsok")
 position = Vector2(-5087.99, -1561.02)
 shape = SubResource("RectangleShape2D_y3kio")
 
-[node name="Laptop" parent="." instance=ExtResource("33_vagbv")]
-position = Vector2(2575.99, 1947.01)
-
-[node name="MeetingTable" parent="." instance=ExtResource("13_ebsak")]
-position = Vector2(8315.99, 2865.03)
-
 [node name="DeskForTwoOnePerson" parent="." instance=ExtResource("14_rdtp5")]
 position = Vector2(2486.68, 1903.01)
 rotation = 3.14159
+
+[node name="Laptop" parent="." instance=ExtResource("33_vagbv")]
+position = Vector2(2575.99, 1934.01)
+
+[node name="MeetingTable" parent="." instance=ExtResource("13_ebsak")]
+position = Vector2(8315.99, 2865.03)

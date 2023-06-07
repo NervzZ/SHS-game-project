@@ -10,7 +10,7 @@ size = Vector2(123, 115)
 size = Vector2(121, 116)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yh852"]
-radius = 158.808
+radius = 197.01
 
 [node name="Laptop" type="AnimatableBody2D" node_paths=PackedStringArray("clickableArea", "interactArea", "mainSprite")]
 process_priority = 1
