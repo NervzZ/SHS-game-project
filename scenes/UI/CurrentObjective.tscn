@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2uxglt6ce04x"]
+
+[ext_resource type="Script" path="res://scripts/UI/CurrentObjective.gd" id="1_kxgel"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ro3oq"]
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_6uepp"]
+font_size = 35
+font_color = Color(1, 1, 0.0431373, 1)
+
+[node name="CurrentObjective" type="Node2D"]
+script = ExtResource("1_kxgel")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 355.0
+offset_bottom = 170.0
+color = Color(0, 0, 0, 0.717647)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Current Objective:"
+label_settings = SubResource("LabelSettings_ro3oq")
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Some objective"
+label_settings = SubResource("LabelSettings_6uepp")

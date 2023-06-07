@@ -1,7 +1,5 @@
 extends Node2D
 
-@onready var gm = get_node("/root/GameManager")
-@onready var levels = get_node("/root/Levels")
 @onready var continueButton : Button = get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/Continue")
 @onready var container : MarginContainer = get_node("MarginContainer")
 
@@ -15,6 +13,6 @@ func _ready():
 	hide()
 	
 func _on_continue_button_pressed():
-	gm.resume_game()
-	gm.goto_scene(levels.MAIN_LEVEL, 5, 30)
+	GameManager.resume_game()
+	GameManager.goto_scene(Levels.Levels.BEDROOM_LEVEL, 5, 30)
 	hide()

@@ -1,5 +1,6 @@
-[gd_scene load_steps=39 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=44 format=3 uid="uid://0n3ucl8435to"]
 
+[ext_resource type="Script" path="res://scripts/level/Office.gd" id="1_c2kqv"]
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
 [ext_resource type="Texture2D" uid="uid://31e84frh1ix5" path="res://graphics/Outside world/Beach Pattern.png" id="2_ub2ev"]
 [ext_resource type="Texture2D" uid="uid://diygnxnganwm" path="res://graphics/Outside world/Porcelaine .png" id="3_pj4ix"]
@@ -31,15 +32,17 @@
 [ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
 [ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
 [ext_resource type="PackedScene" uid="uid://ww8t7joj4iyb" path="res://scenes/clickables/Laptops & PCs/Laptop.tscn" id="33_vagbv"]
+[ext_resource type="PackedScene" uid="uid://ba6bac0nwptqo" path="res://scenes/clickables/Laptops & PCs/LaptopWithEmail.tscn" id="34_6816s"]
+[ext_resource type="PackedScene" uid="uid://df5s4fi3h8fbg" path="res://scenes/actors/ObjectiveClearer.tscn" id="35_3l50y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
 size = Vector2(169, 232)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bcbc"]
-size = Vector2(24.9999, 283)
+size = Vector2(37.4999, 409)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmgtf"]
-size = Vector2(103.938, 331.875)
+size = Vector2(80.9689, 331.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8o84b"]
 size = Vector2(31.9971, 1604.5)
@@ -53,9 +56,13 @@ size = Vector2(60, 1614)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
 size = Vector2(334.374, 29.4999)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6nig"]
+size = Vector2(83.0002, 110)
+
 [node name="Office" type="Node2D"]
 position = Vector2(82, 567)
 rotation = -1.5708
+script = ExtResource("1_c2kqv")
 
 [node name="Outside Decore" type="Node2D" parent="."]
 
@@ -1558,7 +1565,7 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("19_62glk")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("25_lgtp3")]
-position = Vector2(-315.318, 1363.76)
+position = Vector2(-1436.01, 2019.99)
 
 [node name="NPC" parent="." instance=ExtResource("26_50mvd")]
 position = Vector2(-1172.77, 878.678)
@@ -1610,10 +1617,11 @@ pitch_scale = 1.2
 volume_db = -22.0
 
 [node name="Spawn" type="CollisionShape2D" parent="BGM_Office_elevator"]
+position = Vector2(-1137, 656.995)
 shape = SubResource("RectangleShape2D_tqugn")
 
 [node name="Door" type="CollisionShape2D" parent="BGM_Office_elevator"]
-position = Vector2(313, -4.9989)
+position = Vector2(287.75, -1.50037)
 shape = SubResource("RectangleShape2D_8bcbc")
 
 [node name="BGM_Office" parent="." instance=ExtResource("29_c5c4i")]
@@ -1623,6 +1631,7 @@ pitch_scale = 1.4
 volume_db = -18.0
 
 [node name="Door" type="CollisionShape2D" parent="BGM_Office"]
+position = Vector2(11.4845, 0.000244141)
 shape = SubResource("RectangleShape2D_qmgtf")
 
 [node name="Balcony" type="CollisionShape2D" parent="BGM_Office"]

@@ -1,13 +1,17 @@
 extends Node2D
 
+var loading_screen: Node2D = load("res://scenes/menus/Loading.tscn").instantiate()
 var game_over_menu : Node2D = load("res://scenes/menus/Game_over.tscn").instantiate()
 var pause_menu : Node2D = load("res://scenes/menus/Pause_menu.tscn").instantiate()
+var currentObjectiveUi: Node2D = load("res://scenes/UI/CurrentObjective.tscn").instantiate()
+var inventoryObjectiveMenu : Node2D = load("res://scenes/menus/InventoryObjectiveMenu.tscn").instantiate()
 var playerSpawn : Node2D
 var player : CharacterBody2D
 var clock : Node2D = load("res://scenes/UI/clock.tscn").instantiate()
 var UI : CanvasLayer = CanvasLayer.new()
 var current_scene = null
 var playerInventory : Array = []
+var current_objective: String = "Go to work"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,12 +26,15 @@ func _ready():
 	UI.add_child(pause_menu)
 	UI.add_child(game_over_menu)
 	UI.add_child(clock)
-	goto_scene(Levels.Levels.BEDROOM_LEVEL, 5, 30)
+	UI.add_child(loading_screen)
+	UI.add_child(inventoryObjectiveMenu)
+	UI.add_child(currentObjectiveUi)
+	goto_scene(Levels.Levels.MAIN_MENU, 5, 30)
 
 func initPlayer():
 	var camera = Camera2D.new()
 	camera.set_position_smoothing_enabled(true)
-	camera.set_position_smoothing_speed(3)
+	camera.set_position_smoothing_speed(10)
 	player.add_child(camera)
 
 func resume_game():
@@ -53,12 +60,18 @@ func spawnPlayerIfExist():
 		playerSpawn.hide()
 		spawnPlayer()
 
+func gotoNextObjective():
+	print("objective cleared")
+	inventoryObjectiveMenu.nextObjective()
+
 func throwGameOver(gameOverMessage: String):
 	pause_game()
 	var text = game_over_menu.get_node("MarginContainer/VBoxContainer/GameOverMessage/MarginContainer/Label")
 	text.set_text(gameOverMessage)
 	game_over_menu.show()
 	playerInventory = []
+	GameState.loops_game_over += 1
+	GameState.resetGameState()
 	
 
 func goto_scene(level: int, hours : int, minutes : int):
@@ -71,6 +84,8 @@ func goto_scene(level: int, hours : int, minutes : int):
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
 
+	loading_screen.show()
+	await get_tree().create_timer(0.05).timeout 
 	call_deferred("_deferred_goto_scene", Levels.levelPath[level])
 	clock.set_time(hours, minutes)
 	
@@ -92,3 +107,4 @@ func _deferred_goto_scene(path):
 	get_tree().current_scene = current_scene
 	
 	spawnPlayerIfExist()
+	loading_screen.hide()
