@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://0uo6fysveao4" path="res://scenes/decor/Bedroom/Table_bedroom.tscn" id="8_necud"]
 [ext_resource type="Texture2D" uid="uid://cpeb3yju8whui" path="res://graphics/Interior Design/Bedroom/Wardrobe .png" id="9_hmi3q"]
 [ext_resource type="PackedScene" uid="uid://4hlfarhbqile" path="res://scenes/clickables/keys/CyberShieldKeyCard.tscn" id="10_3lifg"]
-[ext_resource type="Texture2D" uid="uid://dfcev8lc4oiv1" path="res://graphics/Interior Design/Small Greenery.png" id="11_1wlkw"]
+[ext_resource type="Texture2D" uid="uid://bwxk8ri4644cu" path="res://graphics/Interior Design/Small Greenery.png" id="11_1wlkw"]
 [ext_resource type="PackedScene" uid="uid://be8g2soaxpir0" path="res://scenes/clickables/doors/door.tscn" id="11_koq6c"]
 [ext_resource type="PackedScene" uid="uid://dlyi1flg7tdr0" path="res://scenes/decor/office/WallWindow.tscn" id="12_qv30q"]
 [ext_resource type="PackedScene" uid="uid://bbwphc7ecxxvg" path="res://scenes/actors/player/player_spawn.tscn" id="15_28jg0"]
@@ -41,27 +41,27 @@ position = Vector2(709.168, 661.799)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor2" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1310.23, 660.11)
+position = Vector2(1310.23, 661.799)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor3" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1911.29, 659.312)
+position = Vector2(1911.29, 661.799)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor21" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1766.1, 62.253)
+position = Vector2(1766.07, 71.253)
 rotation = 1.5708
 scale = Vector2(1.00381, 1.36929)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor22" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1765.07, -337.747)
+position = Vector2(1766.07, -328.071)
 rotation = 1.5708
-scale = Vector2(0.891928, 1.36039)
+scale = Vector2(0.971799, 1.369)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor4" type="Sprite2D" parent="FLOOR"]
-position = Vector2(2512.35, 657.623)
+position = Vector2(2512.35, 661.799)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor9" type="Sprite2D" parent="FLOOR"]
@@ -90,17 +90,18 @@ scale = Vector2(1, 1.04315)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor14" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1311.33, 1954.04)
-scale = Vector2(1, 1.04435)
+position = Vector2(1311.33, 1956.17)
+scale = Vector2(1.006, 1.05)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor15" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1912.38, 1951.06)
+position = Vector2(1912.38, 1956.17)
 scale = Vector2(1, 1.05034)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor16" type="Sprite2D" parent="FLOOR"]
-position = Vector2(2513.44, 1967.75)
+position = Vector2(2513.44, 1956.17)
+scale = Vector2(1, 1.05)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor5" type="Sprite2D" parent="FLOOR"]
@@ -108,23 +109,24 @@ position = Vector2(708.799, 1265.57)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor6" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1309.86, 1263.88)
+position = Vector2(1309.86, 1265.57)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor7" type="Sprite2D" parent="FLOOR"]
-position = Vector2(1910.92, 1263.08)
+position = Vector2(1910.92, 1265.57)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor8" type="Sprite2D" parent="FLOOR"]
-position = Vector2(2511.98, 1261.4)
+position = Vector2(2511.98, 1265.57)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor17" type="Sprite2D" parent="FLOOR"]
-position = Vector2(2783.59, 656.046)
+position = Vector2(2783.59, 661.799)
 texture = ExtResource("2_lovvp")
 
 [node name="CustomFloor18" type="Sprite2D" parent="FLOOR"]
-position = Vector2(2784.69, 1966.17)
+position = Vector2(2784.69, 1956.17)
+scale = Vector2(1, 1.05)
 texture = ExtResource("2_lovvp")
 
 [node name="Porcelaine" type="Sprite2D" parent="FLOOR"]
@@ -133,7 +135,7 @@ scale = Vector2(0.0737207, 0.230475)
 texture = ExtResource("3_scseg")
 
 [node name="CustomFloor19" type="Sprite2D" parent="FLOOR"]
-position = Vector2(2783.22, 1259.82)
+position = Vector2(2783.22, 1265.57)
 texture = ExtResource("2_lovvp")
 
 [node name="Interior" type="Node2D" parent="."]
@@ -171,13 +173,13 @@ rotation = 1.5708
 scale = Vector2(22.2088, 1.83199)
 
 [node name="SmallGreenery" type="Sprite2D" parent="Interior"]
-position = Vector2(483.686, 2187.52)
-scale = Vector2(0.583776, 0.583776)
+position = Vector2(540.069, 2155.25)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("11_1wlkw")
 
 [node name="SmallGreenery2" type="Sprite2D" parent="Interior"]
-position = Vector2(1420.19, 2182.56)
-scale = Vector2(0.583776, 0.583776)
+position = Vector2(1429.07, 2144.25)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("11_1wlkw")
 
 [node name="Bathroom" type="Node2D" parent="Interior"]
@@ -192,89 +194,64 @@ rotation = -1.5708
 
 [node name="Outer brick walls" type="Node2D" parent="."]
 
-[node name="Brick_Wall" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(347.451, 238.037)
-
-[node name="Brick_Wall2" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(746.959, 238.004)
-
 [node name="Brick_Wall3" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(1146.37, 238.136)
-
-[node name="Brick_Wall6" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(2348.8, 234.219)
-
-[node name="Brick_Wall7" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(2744.81, 233.678)
+position = Vector2(884.569, 305.253)
+scale = Vector2(1.20318, 0.234)
 
 [node name="Brick_Wall8" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(3142.25, 237.739)
+position = Vector2(2702.57, 306.253)
+scale = Vector2(1.34517, 0.234)
 
 [node name="Brick_Wall9" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(354.796, 2406.33)
+position = Vector2(426.319, 2342.25)
+scale = Vector2(0.345777, 0.234)
 
 [node name="Brick_Wall17" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(282.49, 2078.68)
+position = Vector2(346.669, 2095.1)
 rotation = 1.5708
-
-[node name="Brick_Wall18" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(282.983, 1679)
-rotation = 1.5708
+scale = Vector2(0.801328, 0.234)
 
 [node name="Brick_Wall19" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(283.062, 1279.66)
+position = Vector2(346.517, 1411.25)
 rotation = 1.5708
-
-[node name="Brick_Wall20" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(280.359, 965.761)
-rotation = 1.5708
+scale = Vector2(1, 0.234)
 
 [node name="Brick_Wall21" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(279.437, 566.422)
+position = Vector2(346.069, 639.253)
 rotation = 1.5708
-
-[node name="Brick_Wall27" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(1215.06, -91.5616)
-rotation = 1.5708
+scale = Vector2(1, 0.234)
 
 [node name="Brick_Wall28" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(1212.36, -405.46)
+position = Vector2(1279.07, -168.747)
 rotation = 1.5708
+scale = Vector2(1.08427, 0.234)
 
 [node name="Brick_Wall29" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(2275.24, -92.4941)
+position = Vector2(2229.07, -169.256)
 rotation = 1.5708
-
-[node name="Brick_Wall30" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(2274.54, -406.393)
-rotation = 1.5708
+scale = Vector2(1.08203, 0.234)
 
 [node name="Brick_Wall22" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(3217.33, 2077.78)
+position = Vector2(3144.07, 1901.25)
 rotation = 1.5708
-
-[node name="Brick_Wall23" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(3217.82, 1678.1)
-rotation = 1.5708
+scale = Vector2(1, 0.234)
 
 [node name="Brick_Wall24" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(3217.9, 1278.76)
+position = Vector2(3143.43, 1127.25)
 rotation = 1.5708
+scale = Vector2(1, 0.234)
 
 [node name="Brick_Wall12" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(1552.71, 2406.33)
-
-[node name="Brick_Wall13" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(1951.68, 2406.03)
+position = Vector2(1720.07, 2342.25)
+scale = Vector2(1, 0.234)
 
 [node name="Brick_Wall14" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(2351.19, 2406)
-
-[node name="Brick_Wall15" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(2750.6, 2406.13)
+position = Vector2(2492.07, 2341.7)
+scale = Vector2(1, 0.234)
 
 [node name="Brick_Wall16" parent="Outer brick walls" instance=ExtResource("1_83bq3")]
-position = Vector2(3149.59, 2406.03)
+position = Vector2(3038.82, 2341.7)
+scale = Vector2(0.4388, 0.234)
 
 [node name="Walls" type="Node2D" parent="."]
 
