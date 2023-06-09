@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://0n3ucl8435to"]
+[gd_scene load_steps=42 format=3 uid="uid://0n3ucl8435to"]
 
 [ext_resource type="Script" path="res://scripts/level/Office.gd" id="1_c2kqv"]
 [ext_resource type="Texture2D" uid="uid://nprx4j3bp7vi" path="res://graphics/Outside world/Pattern City.png" id="1_vgb4o"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://cbq7w3g8wr0en" path="res://sfx/Sources/bgm/Ambiance/Office_elevator.wav" id="31_rqgmi"]
 [ext_resource type="AudioStream" uid="uid://dc3ogne7f6jb8" path="res://sfx/Sources/bgm/Ambiance/Office_outside.wav" id="32_ygwn2"]
 [ext_resource type="PackedScene" uid="uid://ww8t7joj4iyb" path="res://scenes/clickables/Laptops & PCs/Laptop.tscn" id="33_vagbv"]
+[ext_resource type="PackedScene" uid="uid://df5s4fi3h8fbg" path="res://scenes/actors/ObjectiveClearer.tscn" id="33_w8rnh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqugn"]
 size = Vector2(169, 232)
@@ -53,6 +54,9 @@ size = Vector2(60, 1614)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3kio"]
 size = Vector2(334.374, 29.4999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ghu"]
+size = Vector2(110, 142)
 
 [node name="Office" type="Node2D"]
 position = Vector2(82, 567)
@@ -1660,3 +1664,11 @@ position = Vector2(2575.99, 1934.01)
 
 [node name="MeetingTable" parent="." instance=ExtResource("13_ebsak")]
 position = Vector2(8315.99, 2865.03)
+
+[node name="ObjectiveClearer" parent="." instance=ExtResource("33_w8rnh")]
+position = Vector2(-1449.01, 1806.99)
+objective_to_clear = "Go to work"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveClearer"]
+position = Vector2(-1.00073, 215)
+shape = SubResource("RectangleShape2D_c5ghu")
