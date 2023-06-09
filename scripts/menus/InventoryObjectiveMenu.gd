@@ -4,6 +4,7 @@ extends Node2D
 @onready var container: MarginContainer = get_node("MarginContainer")
 @onready var inventoryContainer = get_node("MarginContainer/VBoxContainer/Inventory")
 @onready var objectiveContainer = get_node("MarginContainer/VBoxContainer/Objectives")
+@onready var sfx_inventory = get_node("sfx_Inventory")
 
 var currentObjective: HBoxContainer
 var labelSettingsCurrent: LabelSettings
@@ -50,10 +51,12 @@ func open():
 			addItem(itemName, Globals.gameItems[itemName])
 		
 	GameManager.pause_game()
+	sfx_inventory.play();
 	show()
 	
 func close():
 	GameManager.resume_game()
+	sfx_inventory.stop()
 	hide()
 	flushInventory()
 	

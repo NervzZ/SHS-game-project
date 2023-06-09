@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnsslkqy6wn8k"]
+[gd_scene load_steps=4 format=3 uid="uid://cnsslkqy6wn8k"]
 
 [ext_resource type="Script" path="res://scripts/menus/InventoryObjectiveMenu.gd" id="1_7ydg6"]
 [ext_resource type="Texture2D" uid="uid://cg6o83bhmsrbl" path="res://graphics/items/keycard.png" id="2_7jaxp"]
+[ext_resource type="AudioStream" uid="uid://bn2xhchl6vvdm" path="res://sfx/Sources/sxf/Inventory/Inventory_open.wav" id="3_106sh"]
 
 [node name="InventoryObjectiveMenu" type="Node2D"]
 process_mode = 3
@@ -98,3 +99,8 @@ size_flags_vertical = 0
 theme_override_font_sizes/font_size = 35
 text = "This is my badge. I will need it to access the Cyber Shield office as the entrance door can only unlock with it to prevent unauthorized access."
 autowrap_mode = 2
+
+[node name="sfx_Inventory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_106sh")
+volume_db = -2.0
+pitch_scale = 1.4

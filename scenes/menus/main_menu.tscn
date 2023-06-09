@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://djf146ud17gr4"]
+[gd_scene load_steps=6 format=3 uid="uid://djf146ud17gr4"]
 
 [ext_resource type="Script" path="res://scripts/menus/main_menu.gd" id="1_3n6lb"]
+[ext_resource type="AudioStream" uid="uid://cm2x3473r7mi6" path="res://sfx/Sources/bgm/Main_Menu.wav" id="2_7l0c2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n3a2s"]
 font_size = 200
@@ -89,9 +90,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sx7i6")
 text = "Exit
 "
 
+[node name="bgm_Main_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7l0c2")
+pitch_scale = 1.2
+autoplay = true
+
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer2/LeftContainer/StatGame" to="." method="_on_stat_game_button_down"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/LeftContainer/StatGame" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/LeftContainer/StatGame" to="." method="_on_stat_game_button_up"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer2/RightContainer/Exit" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/LeftContainer/StatGame" to="." method="_on_button_button_up"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer2/RightContainer/Exit" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/HBoxContainer2/RightContainer/Exit" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/HBoxContainer2/RightContainer/Exit" to="." method="_on_button_button_up"]
